@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { colors } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -28,6 +29,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        background: ${({ theme }) => theme.body};
+        color: ${({ theme }) => theme.text};
     }
     ol, ul {
         list-style: none;
@@ -45,3 +48,13 @@ export const GlobalStyle = createGlobalStyle`
         border-spacing: 0;
     }
 `
+
+export const lightTheme = {
+    body: `${colors.mainLight}`,
+    text: `${colors.textLight}`,
+}
+
+export const darkTheme = {
+    body: `${colors.mainDark}`,
+    text: `${colors.textDark}`,
+}
