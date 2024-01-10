@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { colors } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -28,6 +29,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        background: ${colors.mainDark};
+        color: ${colors.textDark};
+        font-family: "DejaVu Sans", sans-serif;
     }
     ol, ul {
         list-style: none;
