@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1;
         background: ${colors.mainDark};
         color: ${colors.textDark};
-        font-family: "DejaVu Sans", sans-serif;
+        font-family: 'FiraGO', sans-serif;
     }
     ol, ul {
         list-style: none;
