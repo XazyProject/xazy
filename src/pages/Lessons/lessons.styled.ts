@@ -17,20 +17,13 @@ export const LessonDiv = styled.div`
         font-size: 20px;
         margin: 30px 0;
         padding: 5px 0;
-        
+        color: ${colors.white};
 
-        a {
-            text-decoration: none;
-            color: ${colors.white};
-
-            &:visited {
-                color: ${colors.white};
-            }
-
-            &:hover {
-                color: ${colors.xazyRed};
-            }
+        &:hover {
+            cursor: pointer;
+            color: ${colors.xazyRed};
         }
+        
     }
 
     p {
@@ -80,6 +73,7 @@ export const LessonDiv = styled.div`
         line-height: 1.7;
         border-radius: 8px;
         color: ${colors.white};
+        margin-bottom: 60px;
     }
 
     a {
@@ -108,13 +102,17 @@ export const LessonNavigation = styled.div`
     width: 249px;
     display: flex;
     flex-direction: column;
-    
     padding: 23px 25px;
     background-color: ${colors.secondaryDark};
     a {
         color: ${colors.textDark};
         text-decoration: none;
         margin-bottom: 15px;
+
+        &:hover {
+            cursor: pointer;
+            color: ${colors.xazyRed};
+        }
     }
 `
 

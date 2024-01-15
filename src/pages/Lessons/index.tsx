@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx'
 import { LessonDiv, LessonLayout, LessonNavigation } from './lessons.styled';
 
 const Lessons: React.FC = () => {
@@ -18,15 +18,13 @@ const Lessons: React.FC = () => {
     }, [file_name]);
 
 
-    console.log(post);
-
     return (
         <LessonLayout>
             <LessonNavigation>
                 <a href='#shesavali'>
                     შესავალი
                 </a>
-                <a href='#პარაგრაფები'>
+                <a href='#paragrafebi'>
                     პარაგრაფები
                 </a>
             </LessonNavigation>

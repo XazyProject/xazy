@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { colors } from "../../../styles/colors";
 
 export const HeadDiv = styled.div`
-    width: 100vw;
     border-bottom: 3px solid ${colors.gray};
+    background-color: ${colors.mainDark};
 `
 
 export const HeaderLayout = styled.div`
-    max-width: 1440px;
     display: flex;
     margin: 0 auto;
     padding: 8px 32px;
