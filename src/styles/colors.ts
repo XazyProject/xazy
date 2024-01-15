@@ -14,5 +14,8 @@ export const colors = {
     lightGray: '#bec5c0',
     gray: '#35383f',
     xazyRed: '#ff2768',
+    codeBg: '#282a36',
+    link: '#93c5fd',
+    linkVisited: '#d8b4fe',
 }
 
