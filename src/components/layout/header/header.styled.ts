@@ -4,6 +4,8 @@ import { colors } from "../../../styles/colors";
 export const HeadDiv = styled.div`
     border-bottom: 3px solid ${colors.gray};
     background-color: ${colors.mainDark};
+    position: fixed;
+    width: 100%;
     z-index: 5;
 `
 
