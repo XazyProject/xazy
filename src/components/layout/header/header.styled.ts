@@ -74,10 +74,21 @@ export const MobileNavigation = styled.div`
     background-color: ${colors.secondaryDark};
     position: absolute;
     right: 0;
-    top: 67px;
+    
     border-bottom-left-radius: 62px;
-    z-index: 5;
+    z-index: -3;
     border: 1px solid ${colors.gray};
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        top: 67px;
+
+    }
+
+    &.non-active {
+        top: -290px;
+
+    }
 
     @media screen and (min-width: 1025px) {
         display: none;

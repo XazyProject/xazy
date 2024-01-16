@@ -20,14 +20,14 @@ const Header = () => {
                     <li><a href="#">მხარდაჭერა</a></li>
                     <img src={avatarExample} alt="avatar" />
                 </HeaderUl>
-                {isOpen ?
-                    <MobileNavigation>
-                        <a href="#" onClick={() => setOpen(false)}>ჩემი პანელი</a>
-                        <a href="#" onClick={() => setOpen(false)}>გაკვეთილები</a>
-                        <a href="#" onClick={() => setOpen(false)}>შემოგვიერთდი</a>
-                        <a href="#" onClick={() => setOpen(false)}>მხარდაჭერა</a>
-                    </MobileNavigation>
-                    : ''}
+
+                <MobileNavigation className={isOpen ? 'active' : 'non-active'}>
+                    <a href="#" onClick={() => setOpen(false)}>ჩემი პანელი</a>
+                    <a href="#" onClick={() => setOpen(false)}>გაკვეთილები</a>
+                    <a href="#" onClick={() => setOpen(false)}>შემოგვიერთდი</a>
+                    <a href="#" onClick={() => setOpen(false)}>მხარდაჭერა</a>
+                </MobileNavigation>
+
             </HeaderLayout>
         </HeadDiv>
     )
