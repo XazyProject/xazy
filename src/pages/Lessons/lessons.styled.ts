@@ -12,6 +12,10 @@ export const LessonDiv = styled.div`
 
     div:first-child {
         display: flex;
+
+        @media screen and (max-width: 1120px) {
+            display: block;
+        }
         
         .content {
             width: 800px;
@@ -46,7 +50,9 @@ export const LessonDiv = styled.div`
             background: ${colors.secondaryDark};
 
             @media screen and (max-width: 1120px) { 
-                display: none;
+                margin-right: auto;
+                margin-left: auto;
+                width: 80%;
             }
 
             ul {
@@ -99,6 +105,11 @@ export const LessonDiv = styled.div`
                 li {
                     padding: 5px 4px 5px 0;
                     width: 240px;
+
+                    @media screen and (max-width: 1120px) {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
                 }
 
                 a {
@@ -107,11 +118,27 @@ export const LessonDiv = styled.div`
                     padding: 5px 0;
                     line-height: 1.7;
 
+                    @media screen and (max-width: 1120px) {
+                        display: block;
+                        margin: 0 auto;
+                    }
+
                     &:hover {
                         color: ${colors.xazyRed};
                         border-bottom: 1px solid ${colors.xazyRed};
 
                     }
+                }
+
+                @media screen and (max-width: 1120px) { 
+                    position: static;
+                    height: 100%;
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    background-repeat: repeat;
+                    background-size: contain;
                 }
             }
         }
@@ -207,6 +234,9 @@ export const LessonDiv = styled.div`
 
     a {
         color: ${colors.link};
+        @media screen and (max-width: 1120px) {
+            font-size: 14px;
+        }
 
         &:visited {
             color: ${colors.linkVisited};
