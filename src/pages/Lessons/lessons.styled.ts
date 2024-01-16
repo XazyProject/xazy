@@ -5,6 +5,76 @@ export const LessonLayout = styled.div`
     display: flex;
 `
 
+export const Socials = styled.div`
+    position: fixed;
+    top: 75vh;
+    @media screen and (max-width: 1120px) {
+            display: none;
+    }
+
+    @media screen and (max-height: 375px) {
+            display: none;
+        }
+    
+    .follow {
+        font-size: 20px;
+        position: absolute;
+        left: 83px;
+        top: -40px;
+        @media screen and (max-height: 535px) {
+            display: none;
+        }
+    }
+
+    a {
+        color: ${colors.textDark};
+    }
+
+    img {
+        position: absolute;
+        width: 40px;
+    }
+
+    span {
+        position: absolute;
+        line-height: 1.3;
+        font-size: 15px;
+
+        &:hover {
+            color: ${colors.white};
+        }
+    }
+
+    .github {
+        left: 26px;
+    }
+
+    .github-text {
+
+        left: 70px;
+    }
+
+    .instagram {
+        left: 152px;
+    }
+
+    .instagram-text {
+        left: 195px;
+    }
+`
+
+export const LogoFixed = styled.div`
+    svg {
+        position: fixed;
+        top: 0;
+        padding: 8px 32px;
+    }
+
+    @media screen and (max-width: 1120px) {
+            display: none;
+        }
+`
+
 export const LessonDiv = styled.div`
     margin: 0 auto;
     color: ${colors.textDarkSecond};
@@ -80,6 +150,7 @@ export const LessonDiv = styled.div`
                 top: 72px;
                 overflow-y: scroll;
                 width: 260px;
+                z-index: 5;
                 /* scrollbar-width: none; 
                 -ms-overflow-style: none;  
                 &::-webkit-scrollbar {   
