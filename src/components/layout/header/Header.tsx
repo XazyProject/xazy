@@ -16,7 +16,7 @@ const Header = () => {
                     <Hamburger toggled={isOpen} toggle={setOpen} />
                     <li><a href="#">ჩემი პანელი</a></li>
                     <li><a href="#">გაკვეთილები</a></li>
-                    <li><a href="#">შემოგვიერთდი</a></li>
+                    <li><a href="https://discord.gg/3z7sxqMTaj" target="_blank">შემოგვიერთდი</a></li>
                     <li><a href="#">მხარდაჭერა</a></li>
                     <img src={avatarExample} alt="avatar" />
                 </HeaderUl>
