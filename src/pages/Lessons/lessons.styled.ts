@@ -21,17 +21,61 @@ export const LessonDiv = styled.div`
         .navigation {
             width: 300px;
             background: ${colors.secondaryDark};
-            position: sticky;
-                top: 10px;
 
+            @media screen and (max-width: 1120px) { 
+                display: none;
+            }
 
             ul {
                 list-style: none;
                 position: fixed;
+                height: 50vh;
+                top: 72px;
+                overflow-y: scroll;
+                width: 260px;
+                /* scrollbar-width: none; 
+                -ms-overflow-style: none;  
+                &::-webkit-scrollbar {   
+                    display: none;
+                } */
+                
+                overflow: auto;
+                background:
+                linear-gradient(#292c31 40%, rgba(41, 44, 49, 0)), linear-gradient(rgba(41, 44, 49, 0), #292c31 70%) 0 100%, /* Shadows */
+                radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+                background: 
+                linear-gradient(#292c31 40%, rgba(41, 44, 49, 0)), linear-gradient(rgba(41, 44, 49, 0), #292c31 70%) 0 100%, /* Shadows */
+                radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+                background-repeat: no-repeat;
+                background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+                /* Opera doesn't support this in the shorthand */
+                background-attachment: local, local, scroll, scroll;
+                /* width */
+                &::-webkit-scrollbar {
+                width: 8px;
+                }
 
+                /* Track */
+                &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 1px grey; 
+                border-radius: 6px;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                background: ${colors.gray}; 
+                border-radius: 10px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                background: ${colors.xazyRed}; 
+                
+                }
+                
                 li {
-                    padding: 5px 0;
-                    max-width: 240px;
+                    padding: 5px 4px 5px 0;
+                    width: 240px;
                 }
 
                 a {

@@ -1,6 +1,14 @@
+import styled from "styled-components"
+
+const Svg = styled.svg`
+     @media screen and (max-width: 1024px) { 
+        width: 140px;
+     }
+`
+
 const SiteLogo = () => {
     return (
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+        <Svg version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="166.000000pt" viewBox="0 0 1043.000000 264.000000"
             preserveAspectRatio="xMidYMid meet">
 
@@ -32,7 +40,7 @@ const SiteLogo = () => {
                 77 -193 0 -193 0 -298 -591 c-164 -324 -300 -588 -302 -586 -3 2 -144 267
                 -313 588 l-309 584 -201 3 c-111 1 -201 0 -201 -3z"/>
             </g>
-        </svg>
+        </Svg>
     )
 }
 
