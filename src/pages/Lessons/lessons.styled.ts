@@ -1,10 +1,54 @@
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
+export const LessonLayout = styled.div`
+    display: flex;
+`
+
 export const LessonDiv = styled.div`
-    width: 800px;
     margin: 0 auto;
     color: ${colors.textDarkSecond};
+    width: 100%;
+
+    div:first-child {
+        display: flex;
+        
+        .content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            width: 300px;
+            background: ${colors.secondaryDark};
+            position: sticky;
+                top: 10px;
+
+
+            ul {
+                list-style: none;
+                position: fixed;
+
+                li {
+                    padding: 5px 0;
+                    max-width: 240px;
+                }
+
+                a {
+                    color: ${colors.textDark};
+                    text-decoration: none;
+                    padding: 5px 0;
+                    line-height: 1.7;
+
+                    &:hover {
+                        color: ${colors.xazyRed};
+                        border-bottom: 1px solid ${colors.xazyRed};
+
+                    }
+                }
+            }
+        }
+    }
 
     h1 {
         font-size: 24px;
@@ -60,7 +104,7 @@ export const LessonDiv = styled.div`
         margin: 27px 0;
         background-color: ${colors.codeBg};
 
-        code.lang-html {
+        code {
             line-height: 1.7;
             color: #ccc;
             background-color: ${colors.codeBg};
@@ -114,8 +158,4 @@ export const LessonNavigation = styled.div`
             color: ${colors.xazyRed};
         }
     }
-`
-
-export const LessonLayout = styled.div`
-    display: flex;
 `

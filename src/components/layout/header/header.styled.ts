@@ -20,6 +20,12 @@ export const HeaderUl = styled.ul`
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 1024px) {
+        li {
+            display: none;
+        }
+    }
+
     img {
         width: 36px;
         height: 36px;

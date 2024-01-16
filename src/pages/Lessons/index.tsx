@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Markdown from 'markdown-to-jsx'
-import { LessonDiv, LessonLayout, LessonNavigation } from './lessons.styled';
+import { LessonDiv, LessonLayout } from './lessons.styled';
 
 const Lessons: React.FC = () => {
     const file_name: string = '3_teqsttan_mushaoba';
@@ -20,14 +20,6 @@ const Lessons: React.FC = () => {
 
     return (
         <LessonLayout>
-            <LessonNavigation>
-                <a href='#shesavali'>
-                    შესავალი
-                </a>
-                <a href='#paragrafebi'>
-                    პარაგრაფები
-                </a>
-            </LessonNavigation>
             <LessonDiv>
                 <Markdown children={post} />
             </LessonDiv>
