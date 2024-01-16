@@ -20,6 +20,18 @@ export const LessonDiv = styled.div`
         .content {
             width: 800px;
             margin: 0 auto;
+
+            ol {
+                list-style: decimal;
+                margin: 20px 0;
+                padding: 0 0 0 26px;
+
+                li {
+                    margin: 8px 0;
+                    padding: 0 0 0 6px;
+                    font-size: 16px;
+                }
+            }
             
             h3 {
                 color: ${colors.white};
@@ -238,8 +250,13 @@ export const LessonDiv = styled.div`
         margin-bottom: 60px;
 
 
-        li {
+        ul li {
             list-style: disc;
+            padding: 5px;
+        }
+
+        ol li {
+            list-style: decimal;
             padding: 5px;
         }
     }
@@ -269,20 +286,3 @@ export const LessonDiv = styled.div`
     }
 `
 
-export const LessonNavigation = styled.div`
-    width: 249px;
-    display: flex;
-    flex-direction: column;
-    padding: 23px 25px;
-    background-color: ${colors.secondaryDark};
-    a {
-        color: ${colors.textDark};
-        text-decoration: none;
-        margin-bottom: 15px;
-
-        &:hover {
-            cursor: pointer;
-            color: ${colors.xazyRed};
-        }
-    }
-`
