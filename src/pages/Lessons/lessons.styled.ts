@@ -20,6 +20,12 @@ export const LessonDiv = styled.div`
         .content {
             width: 800px;
             margin: 0 auto;
+            
+            h3 {
+                color: ${colors.white};
+                font-weight: 500;
+                margin: 25px 0;
+            }
 
             @media screen and (max-width: 830px) { 
                 width: 600px;
@@ -225,11 +231,17 @@ export const LessonDiv = styled.div`
 
     .homework {
         background-color: ${colors.secondaryDark};
-        padding: 24px;
+        padding: 24px 44px;
         line-height: 1.7;
         border-radius: 8px;
         color: ${colors.white};
         margin-bottom: 60px;
+
+
+        li {
+            list-style: disc;
+            padding: 5px;
+        }
     }
 
     a {

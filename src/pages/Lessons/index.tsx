@@ -3,7 +3,7 @@ import Markdown from 'markdown-to-jsx'
 import { LessonDiv, LessonLayout } from './lessons.styled';
 
 const Lessons: React.FC = () => {
-    const file_name: string = '3_teqsttan_mushaoba';
+    const file_name: string = '5_linkebi_da_fotoebi';
     const [post, setPost] = useState<string>('');
 
     useEffect(() => {
