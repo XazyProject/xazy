@@ -16,6 +16,29 @@ export const LessonDiv = styled.div`
         .content {
             width: 800px;
             margin: 0 auto;
+
+            @media screen and (max-width: 830px) { 
+                width: 600px;
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                }
+                p{
+                font-size: 14px;
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                width: 360px;
+
+                h1 {
+                    margin-left: 0;
+                }
+            }
         }
 
         .navigation {
@@ -147,6 +170,24 @@ export const LessonDiv = styled.div`
         padding: 16px 16px 16px 60px;
         margin: 27px 0;
         background-color: ${colors.codeBg};
+        overflow:auto;
+        &::-webkit-scrollbar {
+        height: 14px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+        border: 2px solid ${colors.gray};
+        border-radius: 6px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+        background: ${colors.gray}; 
+        border-radius: 4px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+        background: ${colors.xazyRed}; 
+        }
 
         code {
             line-height: 1.7;
