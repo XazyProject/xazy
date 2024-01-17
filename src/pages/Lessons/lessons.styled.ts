@@ -109,8 +109,16 @@ export const LessonDiv = styled.div`
                 margin: 25px 0;
             }
 
+            img {
+                max-width: 800px;
+            }
+
             @media screen and (max-width: 830px) { 
                 width: 600px;
+
+                img {
+                    max-width: 600px;
+                }
 
                 h1 {
                     font-size: 20px;
@@ -126,6 +134,10 @@ export const LessonDiv = styled.div`
 
             @media screen and (max-width: 640px) {
                 width: 360px;
+
+                img {
+                    max-width: 300px;
+                }
 
                 h1 {
                     margin-left: 0;
