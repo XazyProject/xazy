@@ -3,6 +3,105 @@ import { colors } from "../../styles/colors";
 
 export const LessonLayout = styled.div`
     display: flex;
+
+    .navigation {
+            width: 300px;
+            background: ${colors.secondaryDark};
+
+            @media screen and (max-width: 1120px) { 
+                margin-right: auto;
+                margin-left: auto;
+                width: 80%;
+            }
+
+            ul {
+                list-style: none;
+                position: fixed;
+                height: 50vh;
+                top: 72px;
+                overflow-y: scroll;
+                width: 260px;
+                z-index: 5;
+                /* scrollbar-width: none; 
+                -ms-overflow-style: none;  
+                &::-webkit-scrollbar {   
+                    display: none;
+                } */
+                
+                overflow: auto;
+                background:
+                linear-gradient(#292c31 40%, rgba(41, 44, 49, 0)), linear-gradient(rgba(41, 44, 49, 0), #292c31 70%) 0 100%, /* Shadows */
+                radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+                background: 
+                linear-gradient(#292c31 40%, rgba(41, 44, 49, 0)), linear-gradient(rgba(41, 44, 49, 0), #292c31 70%) 0 100%, /* Shadows */
+                radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+                background-repeat: no-repeat;
+                background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+                /* Opera doesn't support this in the shorthand */
+                background-attachment: local, local, scroll, scroll;
+                /* width */
+                &::-webkit-scrollbar {
+                width: 8px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 1px grey; 
+                border-radius: 6px;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                background: ${colors.gray}; 
+                border-radius: 10px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                background: ${colors.xazyRed}; 
+                
+                }
+                
+                li {
+                    padding: 5px 4px 5px 0;
+                    width: 240px;
+
+                    @media screen and (max-width: 1120px) {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                }
+
+                a {
+                    color: ${colors.textDark};
+                    text-decoration: none;
+                    padding: 5px 0;
+                    line-height: 1.7;
+
+                    @media screen and (max-width: 1120px) {
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    &:hover {
+                        color: ${colors.xazyRed};
+                        border-bottom: 1px solid ${colors.xazyRed};
+
+                    }
+                }
+
+                @media screen and (max-width: 1120px) { 
+                    position: static;
+                    height: 100%;
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    background-repeat: repeat;
+                    background-size: contain;
+                }
+            }
+        }
 `
 
 export const Socials = styled.div`
@@ -80,16 +179,17 @@ export const LessonDiv = styled.div`
     color: ${colors.textDarkSecond};
     width: 100%;
 
-    div:first-child {
-        display: flex;
-
         @media screen and (max-width: 1120px) {
             display: block;
         }
         
-        .content {
+        
             width: 800px;
             margin: 0 auto;
+
+            li {
+                line-height: 1.5;
+            }
 
             ol {
                 list-style: decimal;
@@ -143,7 +243,7 @@ export const LessonDiv = styled.div`
                     margin-left: 0;
                 }
             }
-        }
+        
 
         .navigation {
             width: 300px;
@@ -243,7 +343,7 @@ export const LessonDiv = styled.div`
                 }
             }
         }
-    }
+    
 
     h1 {
         font-size: 24px;
@@ -368,4 +468,3 @@ export const LessonDiv = styled.div`
         border-radius: 6px;
     }
 `
-
