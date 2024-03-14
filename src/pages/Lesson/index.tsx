@@ -6,7 +6,7 @@ import GITHUB from '../../assets/images/GITHUB.svg'
 import INSTAGRAM from '../../assets/images/INSTAGRAM.svg'
 
 
-const Lessons: React.FC = () => {
+const Lesson: React.FC = () => {
     const file_name: string = '2_kaskadi';
     const [post, setPost] = useState<string>('');
     const [h2Array, setH2Array] = useState<any[]>([]);
@@ -117,4 +117,4 @@ const Lessons: React.FC = () => {
     );
 };
 
-export default Lessons;
+export default Lesson
