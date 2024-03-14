@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
-import { fundamentalebi, sashualoHtmlCss } from "./courseDetailsData";
+import { fundamentalebi, sashualoDonisHtmlCss } from "./courseDetailsData";
 import { CourseDetailsCard, CourseDetailsLayout } from "./styled";
 
 
 
 const CourseDetails = () => {
-  const { link } = useParams<{ link: string }>();
+  const { courseName } = useParams<{ courseName: string }>();
 
-  const courseData = link === "fundamentalebi" ? fundamentalebi : 
-  link === "sashualoHtmlCss" ? sashualoHtmlCss :
+  const courseData = courseName === "fundamentalebi" ? fundamentalebi : 
+  courseName === "sashualoDonisHtmlCss" ? sashualoDonisHtmlCss :
   [];
 
   return (

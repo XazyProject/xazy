@@ -4,10 +4,13 @@ import { LessonDiv, LessonLayout, LogoFixed, Socials } from './lessons.styled';
 import SiteLogo from '../../assets/images/logo';
 import GITHUB from '../../assets/images/GITHUB.svg'
 import INSTAGRAM from '../../assets/images/INSTAGRAM.svg'
+import { useParams } from 'react-router-dom';
 
 
 const Lesson: React.FC = () => {
-    const file_name: string = '2_kaskadi';
+  const { courseName, chapter, link } = useParams<{ courseName: string, chapter: string, link: string }>();
+  const file_name: string = `${link}`;
+  console.log(courseName)
     const [post, setPost] = useState<string>('');
     const [h2Array, setH2Array] = useState<any[]>([]);
     const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
@@ -15,7 +18,8 @@ const Lesson: React.FC = () => {
     useEffect(() => {
       async function fetchData() {
         try {
-          const res = await import(`./${file_name}.md`);
+          const res = await import(`../../masala/${courseName}/${chapter}/${file_name}.md`);
+          console.log('res', res)
           const markdownContent = await fetch(res.default).then((res) => res.text());
           setPost(markdownContent);
         } catch (err) {

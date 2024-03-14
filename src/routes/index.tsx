@@ -10,12 +10,12 @@ const AllRoutes = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path='/courses' element={<Courses img={''} title={''} description={''} link={''} lessons={0} projects={0} />} />
-          <Route path='/courses/:link' element={<CourseDetails />} />
-          <Route path='/lesson/:id' element={<Lesson />} />
+          <Route path='/courses/:courseName' element={<CourseDetails />} />
+          <Route path='/courses/:courseName/:chapter/:link' element={<Lesson />} />
         </Route>
       </Routes>
     </BrowserRouter>
   )
-}
+} 
 
 export default AllRoutes
