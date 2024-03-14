@@ -1,13 +1,19 @@
 import { useParams } from "react-router-dom";
-import { fundamentalebi } from "./courseDetailsData";
+import { fundamentalebi, sashualoHtmlCss } from "./courseDetailsData";
 import { CourseDetailsCard, CourseDetailsLayout } from "./styled";
+
+
 
 const CourseDetails = () => {
   const { link } = useParams<{ link: string }>();
 
+  const courseData = link === "fundamentalebi" ? fundamentalebi : 
+  link === "sashualoHtmlCss" ? sashualoHtmlCss :
+  [];
+
   return (
     <CourseDetailsLayout>
-      {fundamentalebi.map((item, index) => (
+      {courseData.map((item, index) => (
         <CourseDetailsCard key={`course-details-card-${index}`}>
           <h2>{item.title}</h2>
           {item.content.map((content, index) => (

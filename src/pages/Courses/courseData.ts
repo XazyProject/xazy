@@ -15,7 +15,7 @@ export const courseData: ICourseProps[] = [
     img: `${intermediateHtmlCss}`,
     title: 'საშუალო დონის HTML & CSS',
     description: "ჩახვალთ HTML და CSS-ს სიღრმეებში და ისწავლით ბევრ გამოსადეგ ხელსაწყოს. სწავლის შემდეგ შეძლებთ საშუალო სირთულის ვებ-გვერდების აწყობას.",
-    link: './sashualo-html-css',
+    link: './sashualoHtmlCss',
     lessons: 22,
     projects: 2,
   },

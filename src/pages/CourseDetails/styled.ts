@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 export const CourseDetailsLayout = styled.div`
-  max-width: 750px;
-  margin: 50px auto;
+  max-width: 900px;
+  margin: 40px auto;
   padding: 0 20px;
 `
 

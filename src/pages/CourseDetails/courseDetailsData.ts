@@ -123,3 +123,49 @@ export const fundamentalebi = [
     ]
   },
 ]
+
+export const sashualoHtmlCss = [
+  {
+    title: 'საშუალო HTML კონცეპტები',
+    content: [
+      {
+        title: 'SVG',
+        link: './sashualoHtmlCss/1_svg',
+      },
+      {
+        title: 'ცხრილი',
+        link: './sashualoHtmlCss/2_cxrili',
+      },
+    ]
+  },
+  {
+    title: 'საშუალო CSS კონცეპტები',
+    content: [
+      {
+        title: 'CSS ერთეულები',
+        link: './sashualoHtmlCss/1_css_erteulebi',
+      },
+      {
+        title: 'მეტი ტექსტის სტილი',
+        link: './sashualoHtmlCss/2_meti_teqstis_stili',
+      },
+      {
+        title: 'მეტი CSS სტილი',
+        link: './sashualoHtmlCss/3_meti_css_stili',
+      },
+      {
+        title: 'რთული CSS სელექტორები',
+        link: './sashualoHtmlCss/4_rtuli_css_seleqtorebi',
+      },
+      {
+        title: 'პოზიციონირება',
+        link: './sashualoHtmlCss/5_pozicionireba',
+      },
+      {
+        title: 'CSS ფუნქციები',
+        link: './sashualoHtmlCss/6_css_funqciebi',
+        project: false,
+      },
+    ]
+  },
+]
