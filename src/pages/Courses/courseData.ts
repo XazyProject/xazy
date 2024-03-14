@@ -7,7 +7,7 @@ export const courseData: ICourseProps[] = [
     img: `${foundationsCourse}`,
     title: 'საფუძვლები',
     description: `ისწავლით როგორ შექმნათ უბრალო ვებ-გვერდები. გაიგებთ რას აკეთებენ ვებ-დეველოპერები და გაივლით საფუძვლებს, რაც მომდევნო კურსების სწავლაში გამოგადგებათ.`,
-    link: './safudzvlebi',
+    link: './fundamentalebi',
     lessons: 22,
     projects: 2,
   },
