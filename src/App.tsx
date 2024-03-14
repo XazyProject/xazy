@@ -1,12 +1,10 @@
-import Header from './components/layout/header/Header';
-import Lessons from './pages/Lessons';
+import AllRoutes from './routes';
 
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Lessons />
+      <AllRoutes />
     </>
   );
 };
