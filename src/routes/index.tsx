@@ -3,12 +3,14 @@ import Layout from "../components/layout";
 import Lesson from "../pages/Lesson";
 import Courses from "../pages/Courses/Courses";
 import CourseDetails from "../pages/CourseDetails/CourseDetails";
+import Home from "pages/Home";
 
 const AllRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
           <Route
             path="/courses"
             element={
