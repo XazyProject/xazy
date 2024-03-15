@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
-import { LessonDiv, LessonLayout, LogoFixed, Socials } from "./lessons.styled";
-import SiteLogo from "../../assets/images/logo";
+import { LessonDiv, LessonLayout, Socials } from "./lessons.styled";
 import GITHUB from "../../assets/images/GITHUB.svg";
 import INSTAGRAM from "../../assets/images/INSTAGRAM.svg";
 import { useParams } from "react-router-dom";
@@ -17,7 +16,9 @@ const Lesson: React.FC = () => {
   const [post, setPost] = useState<string>("");
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
-
+  document.querySelectorAll("a").forEach((anchor) => {
+    anchor.setAttribute("target", "_blank");
+  });
   useEffect(() => {
     async function fetchData() {
       try {
@@ -107,42 +108,33 @@ const Lesson: React.FC = () => {
             </li>
           ))}
         </ul>
-        <LogoFixed>
-          <SiteLogo />
-          <Socials>
-            <h4 className="follow">გამოგვყევით</h4>
-            <a
-              href="https://github.com/xazyProject"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={GITHUB} className="github" alt="github" />
-              <span className="github-text">
-                ჩვენი <br /> გითჰაბი
-              </span>
-            </a>
-            <a
-              href="https://instagram.com/xazy.ge"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={INSTAGRAM} className="instagram" alt="instagram" />
-              <span className="instagram-text">
-                ჩვენი <br /> ინსტაგრამი
-              </span>
-            </a>
-          </Socials>
-        </LogoFixed>
+        <Socials>
+          <h4 className="follow">გამოგვყევით</h4>
+          <a
+            href="https://github.com/xazyProject"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={GITHUB} className="github" alt="github" />
+            <span className="github-text">
+              ჩვენი <br /> გითჰაბი
+            </span>
+          </a>
+          <a
+            href="https://instagram.com/xazy.ge"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={INSTAGRAM} className="instagram" alt="instagram" />
+            <span className="instagram-text">
+              ჩვენი <br /> ინსტაგრამი
+            </span>
+          </a>
+        </Socials>
       </div>
       <LessonDiv>
         <Markdown>{post}</Markdown>
       </LessonDiv>
-      <script src="./build/quizdown.js"></script>
-      <script src="./build/extensions/quizdownKatex.js"></script>
-      <script src="./build/extensions/quizdownHighlight.js"></script>
-      <script>
-        quizdown.register(quizdownKatex).register(quizdownHighlight).init();
-      </script>
     </LessonLayout>
   );
 };

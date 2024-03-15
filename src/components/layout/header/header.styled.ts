@@ -16,6 +16,12 @@ export const HeaderLayout = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 5;
+  svg {
+    @media screen and (max-width: 1024px) {
+      width: 140px;
+      margin: 5px 0;
+    }
+  }
 `;
 
 export const HeaderUl = styled.ul`
@@ -38,6 +44,7 @@ export const HeaderUl = styled.ul`
 
     div.hamburger-react {
       display: block;
+      order: 1;
     }
   }
 

@@ -8,7 +8,7 @@ import {
 import avatarExample from "../../../assets/images/avatarExample.png";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -16,7 +16,9 @@ const Header = () => {
   return (
     <HeadDiv>
       <HeaderLayout>
-        <SiteLogo />
+        <Link to="/">
+          <SiteLogo />
+        </Link>
         <HeaderUl>
           <Hamburger toggled={isOpen} toggle={setOpen} />
           <li>

@@ -5,16 +5,17 @@ export const LessonLayout = styled.div`
   display: flex;
 
   .navigation {
-    width: 300px;
+    min-width: 300px;
     background: ${colors.secondaryDark};
+    /* position: relative; */
 
     ul {
-      position: fixed;
-      height: 50vh;
-      top: 100px;
+      position: sticky;
+      height: min(400px, 70vh);
+      top: 10px;
       overflow-y: scroll;
-      width: 260px;
-      left: 20px;
+      width: 90%;
+      margin: 20px auto 0 auto;
       z-index: 5;
       /* scrollbar-width: none; 
                 -ms-overflow-style: none;  
@@ -99,7 +100,7 @@ export const LessonLayout = styled.div`
         cursor: pointer;
         padding: 15px 4px 5px 0;
         width: 240px;
-
+        line-height: 1.5;
         &:hover {
           color: ${colors.xazyRed};
         }
@@ -116,6 +117,12 @@ export const LessonLayout = styled.div`
           border-bottom: 1px solid ${colors.xazyRed};
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navigation {
+      display: none;
     }
   }
 `;
@@ -166,14 +173,9 @@ export const Socials = styled.div`
   .instagram-text {
     left: 195px;
   }
-`;
 
-export const LogoFixed = styled.div`
-  border-bottom: 1px solid ${colors};
-  svg {
-    position: fixed;
-    top: 0;
-    padding: 8px 32px;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -181,8 +183,22 @@ export const LessonDiv = styled.div`
   margin: 0 auto;
   color: ${colors.textDarkSecond};
   max-width: 800px;
+  min-width: 100px;
   margin: 0 auto;
   padding: 0 20px;
+
+  a {
+    text-decoration: none;
+
+    &:link {
+      color: ${colors.link};
+    }
+
+    &:active,
+    &:visited {
+      color: ${colors.linkVisited};
+    }
+  }
 
   li {
     line-height: 1.5;
@@ -339,6 +355,7 @@ export const LessonDiv = styled.div`
     margin: 30px 0;
     padding: 5px 0;
     color: ${colors.white};
+    line-height: 1.5;
 
     &:hover {
       cursor: pointer;
