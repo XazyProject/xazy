@@ -4,7 +4,7 @@ import { colors } from "../../styles/colors";
 export const CoursesLayout = styled.div`
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
 `;
 
 export const CourseCardLayout = styled.div`
@@ -46,6 +46,13 @@ export const CourseCardLayout = styled.div`
       opacity: 1;
     }
   }
+  @media screen and (max-width: 768px) {
+    .course-details {
+      width: 90%;
+      opacity: 1;
+      text-align: center;
+    }
+  }
 `;
 
 export const CourseCardTitle = styled.div`
@@ -70,6 +77,15 @@ export const CourseCardTitle = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    div {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 export const CourseCardTop = styled.div`
@@ -79,6 +95,10 @@ export const CourseCardTop = styled.div`
   width: 100%;
   padding-bottom: 30px;
   border-bottom: 1px solid ${colors.gray};
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CourseLogo = styled.div`
@@ -94,5 +114,10 @@ export const CourseLogo = styled.div`
     border-radius: 100%;
     background-color: ${colors.gray};
     border: 3px solid ${colors.xazyRed};
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
   }
 `;
