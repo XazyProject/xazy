@@ -5,7 +5,7 @@ export const CoursesLayout = styled.div`
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 0;
-`
+`;
 
 export const CourseCardLayout = styled.div`
   background-color: ${colors.codeBg};
@@ -46,7 +46,7 @@ export const CourseCardLayout = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 
 export const CourseCardTitle = styled.div`
   display: flex;
@@ -63,14 +63,14 @@ export const CourseCardTitle = styled.div`
       flex-direction: row;
       font-size: 14px;
       opacity: 0.7;
-      
+
       svg {
         margin-right: 5px;
         width: 20px;
       }
     }
   }
-`
+`;
 
 export const CourseCardTop = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ export const CourseCardTop = styled.div`
   width: 100%;
   padding-bottom: 30px;
   border-bottom: 1px solid ${colors.gray};
-`
+`;
 
 export const CourseLogo = styled.div`
   width: 100%;
@@ -95,4 +95,4 @@ export const CourseLogo = styled.div`
     background-color: ${colors.gray};
     border: 3px solid ${colors.xazyRed};
   }
-`
+`;

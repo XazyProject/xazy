@@ -1,37 +1,62 @@
 import SiteLogo from "../../../assets/images/logo";
-import { HeadDiv, HeaderLayout, HeaderUl, MobileNavigation } from "./header.styled";
-import avatarExample from '../../../assets/images/avatarExample.png'
-import Hamburger from 'hamburger-react'
+import {
+  HeadDiv,
+  HeaderLayout,
+  HeaderUl,
+  MobileNavigation,
+} from "./header.styled";
+import avatarExample from "../../../assets/images/avatarExample.png";
+import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
 const Header = () => {
-    const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
-    return (
-        <HeadDiv>
-            <HeaderLayout>
-                <SiteLogo />
-                <HeaderUl>
-                    <Hamburger toggled={isOpen} toggle={setOpen} />
-                    <li><a href="/">ჩემი პანელი</a></li>
-                    <li><NavLink to="/courses">გაკვეთილები</NavLink></li>
-                    <li><a href="https://discord.gg/3z7sxqMTaj" target="_blank" rel="noreferrer">შემოგვიერთდი</a></li>
-                    <li><a href="/">მხარდაჭერა</a></li>
-                    <img src={avatarExample} alt="avatar" />
-                </HeaderUl>
+  return (
+    <HeadDiv>
+      <HeaderLayout>
+        <SiteLogo />
+        <HeaderUl>
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <li>
+            <a href="/">ჩემი პანელი</a>
+          </li>
+          <li>
+            <NavLink to="/courses">გაკვეთილები</NavLink>
+          </li>
+          <li>
+            <a
+              href="https://discord.gg/3z7sxqMTaj"
+              target="_blank"
+              rel="noreferrer"
+            >
+              შემოგვიერთდი
+            </a>
+          </li>
+          <li>
+            <a href="/">მხარდაჭერა</a>
+          </li>
+          <img src={avatarExample} alt="avatar" />
+        </HeaderUl>
 
-                <MobileNavigation className={isOpen ? 'active' : 'non-active'}>
-                    <a href="/" onClick={() => setOpen(false)}>ჩემი პანელი</a>
-                    <a href="/" onClick={() => setOpen(false)}>გაკვეთილები</a>
-                    <a href="/" onClick={() => setOpen(false)}>შემოგვიერთდი</a>
-                    <a href="/" onClick={() => setOpen(false)}>მხარდაჭერა</a>
-                </MobileNavigation>
-
-            </HeaderLayout>
-        </HeadDiv>
-    )
-}
+        <MobileNavigation className={isOpen ? "active" : "non-active"}>
+          <a href="/" onClick={() => setOpen(false)}>
+            ჩემი პანელი
+          </a>
+          <a href="/" onClick={() => setOpen(false)}>
+            გაკვეთილები
+          </a>
+          <a href="/" onClick={() => setOpen(false)}>
+            შემოგვიერთდი
+          </a>
+          <a href="/" onClick={() => setOpen(false)}>
+            მხარდაჭერა
+          </a>
+        </MobileNavigation>
+      </HeaderLayout>
+    </HeadDiv>
+  );
+};
 
 export default Header;

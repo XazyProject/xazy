@@ -5,7 +5,7 @@ export const CourseDetailsLayout = styled.div`
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
-`
+`;
 
 export const CourseDetailsCard = styled.div`
   margin-bottom: 40px;
@@ -45,4 +45,4 @@ export const CourseDetailsCard = styled.div`
     opacity: 0.6;
     width: 22px;
   }
-`
+`;
