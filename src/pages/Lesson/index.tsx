@@ -28,7 +28,7 @@ const Lesson: React.FC = () => {
       }
   
       fetchData();
-    }, [file_name]);
+    }, [chapter, courseName, file_name]);
   
     useEffect(() => {
       const timeoutId = setTimeout(() => {
@@ -82,17 +82,20 @@ const Lesson: React.FC = () => {
     return (
         <LessonLayout>
             <div className="navigation">
-            <ul>
-                {h2Array.map((item, index) => (
-                    <li
-                    key={`category-left-${index}`}
-                    onClick={() => handleNavigationClick(index)}
-                    className={index === selectedH2Index ? 'selected' : ''}
-                    >
-                    {item}
-                    </li>
-                ))}
-            </ul>
+              <ul>
+                <h4>
+                  სარჩევი
+                </h4>
+                  {h2Array.map((item, index) => (
+                      <li
+                      key={`category-left-${index}`}
+                      onClick={() => handleNavigationClick(index)}
+                      className={index === selectedH2Index ? 'selected' : ''}
+                      >
+                      {item}
+                      </li>
+                  ))}
+              </ul>
                 <LogoFixed>
                     <SiteLogo />
                     <Socials>

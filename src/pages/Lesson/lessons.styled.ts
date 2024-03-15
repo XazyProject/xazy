@@ -8,19 +8,13 @@ export const LessonLayout = styled.div`
             width: 300px;
             background: ${colors.secondaryDark};
 
-            @media screen and (max-width: 1120px) { 
-                margin-right: auto;
-                margin-left: auto;
-                width: 80%;
-            }
-
             ul {
-                list-style: none;
                 position: fixed;
                 height: 50vh;
-                top: 72px;
+                top: 100px;
                 overflow-y: scroll;
                 width: 260px;
+                left: 20px;
                 z-index: 5;
                 /* scrollbar-width: none; 
                 -ms-overflow-style: none;  
@@ -59,16 +53,27 @@ export const LessonLayout = styled.div`
                 /* Handle on hover */
                 &::-webkit-scrollbar-thumb:hover {
                 background: ${colors.xazyRed}; 
-                
                 }
+
+                
+                    h4 {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                        font-weight: 600;
+                        color: ${colors.lightGray};
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid ${colors.xazyRed};
+                        text-align: center;
+                    }
+
                 
                 li {
-                    padding: 5px 4px 5px 0;
+                    cursor: pointer;
+                    padding: 15px 4px 5px 0;
                     width: 240px;
 
-                    @media screen and (max-width: 1120px) {
-                        text-align: center;
-                        margin: 0 auto;
+                    &:hover {
+                        color: ${colors.xazyRed};
                     }
                 }
 
@@ -78,27 +83,11 @@ export const LessonLayout = styled.div`
                     padding: 5px 0;
                     line-height: 1.7;
 
-                    @media screen and (max-width: 1120px) {
-                        display: block;
-                        margin: 0 auto;
-                    }
-
                     &:hover {
                         color: ${colors.xazyRed};
                         border-bottom: 1px solid ${colors.xazyRed};
 
                     }
-                }
-
-                @media screen and (max-width: 1120px) { 
-                    position: static;
-                    height: 100%;
-                    display: flex;
-                    width: 100%;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    background-repeat: repeat;
-                    background-size: contain;
                 }
             }
         }
@@ -106,23 +95,14 @@ export const LessonLayout = styled.div`
 
 export const Socials = styled.div`
     position: fixed;
-    top: 75vh;
-    @media screen and (max-width: 1120px) {
-            display: none;
-    }
-
-    @media screen and (max-height: 375px) {
-            display: none;
-        }
+    bottom: 80px;
+    left: -10px;
     
     .follow {
         font-size: 20px;
         position: absolute;
         left: 83px;
         top: -40px;
-        @media screen and (max-height: 535px) {
-            display: none;
-        }
     }
 
     a {
@@ -163,29 +143,20 @@ export const Socials = styled.div`
 `
 
 export const LogoFixed = styled.div`
+    border-bottom: 1px solid ${colors};
     svg {
         position: fixed;
         top: 0;
         padding: 8px 32px;
     }
-
-    @media screen and (max-width: 1120px) {
-            display: none;
-        }
 `
 
 export const LessonDiv = styled.div`
     margin: 0 auto;
     color: ${colors.textDarkSecond};
-    width: 100%;
-
-        @media screen and (max-width: 1120px) {
-            display: block;
-        }
-        
-        
-            width: 800px;
-            margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 
             li {
                 line-height: 1.5;
@@ -211,49 +182,11 @@ export const LessonDiv = styled.div`
 
             img {
                 max-width: 800px;
-            }
-
-            @media screen and (max-width: 830px) { 
-                width: 600px;
-
-                img {
-                    max-width: 600px;
-                }
-
-                h1 {
-                    font-size: 20px;
-                }
-
-                h2 {
-                    font-size: 16px;
-                }
-                p{
-                font-size: 14px;
-                }
-            }
-
-            @media screen and (max-width: 640px) {
-                width: 360px;
-
-                img {
-                    max-width: 300px;
-                }
-
-                h1 {
-                    margin-left: 0;
-                }
-            }
-        
+            }      
 
         .navigation {
             width: 300px;
             background: ${colors.secondaryDark};
-
-            @media screen and (max-width: 1120px) { 
-                margin-right: auto;
-                margin-left: auto;
-                width: 80%;
-            }
 
             ul {
                 list-style: none;
@@ -306,11 +239,6 @@ export const LessonDiv = styled.div`
                 li {
                     padding: 5px 4px 5px 0;
                     width: 240px;
-
-                    @media screen and (max-width: 1120px) {
-                        text-align: center;
-                        margin: 0 auto;
-                    }
                 }
 
                 a {
@@ -319,27 +247,11 @@ export const LessonDiv = styled.div`
                     padding: 5px 0;
                     line-height: 1.7;
 
-                    @media screen and (max-width: 1120px) {
-                        display: block;
-                        margin: 0 auto;
-                    }
-
                     &:hover {
                         color: ${colors.xazyRed};
                         border-bottom: 1px solid ${colors.xazyRed};
 
                     }
-                }
-
-                @media screen and (max-width: 1120px) { 
-                    position: static;
-                    height: 100%;
-                    display: flex;
-                    width: 100%;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    background-repeat: repeat;
-                    background-size: contain;
                 }
             }
         }
@@ -348,8 +260,25 @@ export const LessonDiv = styled.div`
     h1 {
         font-size: 24px;
         color: ${colors.white};
-        margin-left: 40%;
         margin-top: 40px;
+        text-align: center;
+        -webkit-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+        padding-bottom: 5px;
+        font-weight: 700;
+        text-shadow: 3px 5px 2px ${colors.xazyRed};
+        &::after {
+            width: 100px;
+            height: 1px;
+            display: block;
+            content: "";
+            position: relative;
+            margin-top: 25px;
+            left: 50%;
+            margin-left: -50px;
+            background-color: ${colors.xazyRed};
+        }
     }
 
     h2 {
@@ -446,9 +375,6 @@ export const LessonDiv = styled.div`
 
     a {
         color: ${colors.link};
-        @media screen and (max-width: 1120px) {
-            font-size: 14px;
-        }
 
         &:visited {
             color: ${colors.linkVisited};
