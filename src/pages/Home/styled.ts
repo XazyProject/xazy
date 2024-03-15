@@ -17,6 +17,7 @@ export const HomeContainer = styled.div`
 `;
 
 export const HomeIntro = styled.div`
+  padding: 0 20px;
   h1 {
     font-size: 52px;
     color: ${colors.mainLight};
@@ -60,6 +61,11 @@ export const HomeIntro = styled.div`
       background-color: ${colors.mainDark};
     }
   }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
 `;
 
 export const HomeAbout = styled.div`
@@ -75,6 +81,7 @@ export const HomeCourseInfo = styled.div`
     margin-bottom: 40px;
     font-size: 28px;
     color: ${colors.mainLight};
+    line-height: 1.5;
   }
 
   p {
@@ -109,6 +116,15 @@ export const HomeCourseInfo = styled.div`
         max-width: 430px;
         margin: 0;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    div {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    h2 {
+      line-height: 1.5;
     }
   }
 `;
