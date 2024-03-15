@@ -43,18 +43,23 @@ const Header = () => {
         </HeaderUl>
 
         <MobileNavigation className={isOpen ? "active" : "non-active"}>
-          <a href="/" onClick={() => setOpen(false)}>
+          <NavLink to="/" onClick={() => setOpen(false)}>
             ჩემი პანელი
-          </a>
-          <a href="/" onClick={() => setOpen(false)}>
+          </NavLink>
+          <NavLink to="/" onClick={() => setOpen(false)}>
             გაკვეთილები
-          </a>
-          <a href="/" onClick={() => setOpen(false)}>
+          </NavLink>
+          <a
+            href="https://discord.gg/3z7sxqMTaj"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+          >
             შემოგვიერთდი
           </a>
-          <a href="/" onClick={() => setOpen(false)}>
+          <NavLink to="/" onClick={() => setOpen(false)}>
             მხარდაჭერა
-          </a>
+          </NavLink>
         </MobileNavigation>
       </HeaderLayout>
     </HeadDiv>
