@@ -22,7 +22,7 @@ const Header = () => {
         <HeaderUl>
           <Hamburger toggled={isOpen} toggle={setOpen} />
           <li>
-            <a href="/">ჩემი პანელი</a>
+            <NavLink to="/">მთავარი</NavLink>
           </li>
           <li>
             <NavLink to="/courses">გაკვეთილები</NavLink>
@@ -37,7 +37,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="/">მხარდაჭერა</a>
+            <NavLink to="/">მხარდაჭერა</NavLink>
           </li>
           <img src={avatarExample} alt="avatar" />
         </HeaderUl>
