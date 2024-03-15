@@ -45,4 +45,15 @@ export const CourseDetailsCard = styled.div`
     opacity: 0.6;
     width: 22px;
   }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 18px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
 `;
