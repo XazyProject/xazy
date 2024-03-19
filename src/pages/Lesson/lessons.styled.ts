@@ -398,7 +398,7 @@ export const LessonDiv = styled.div`
       monospace;
     font-size: 1rem;
     line-height: 1.7;
-    padding: 16px 16px 16px 60px;
+    /* padding: 16px 16px 16px 60px; */
     margin: 27px 0;
     background-color: ${colors.codeBg};
     overflow: auto;

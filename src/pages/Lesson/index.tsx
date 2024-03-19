@@ -19,6 +19,29 @@ const Lesson: React.FC = () => {
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
 
+  function addLineClass(pre: HTMLPreElement) {
+    const lines = pre.innerText.split("\n"); // can use innerHTML also
+    while (pre.childNodes.length > 0) {
+      pre.removeChild(pre.childNodes[0]);
+    }
+    for (let i = 0; i < lines.length; i++) {
+      const span = document.createElement("span");
+      span.className = "line";
+      span.innerText = lines[i]; // can use innerHTML also
+      pre.appendChild(span);
+      pre.appendChild(document.createTextNode("\n"));
+    }
+  }
+  window.addEventListener(
+    "load",
+    function () {
+      const pres = document.getElementsByTagName("pre");
+      for (let i = 0; i < pres.length; i++) {
+        addLineClass(pres[i]);
+      }
+    },
+    false,
+  );
   const highlightCode = () => {
     const codeBlocks = document.querySelectorAll("pre code");
     codeBlocks.forEach((codeBlock) => {

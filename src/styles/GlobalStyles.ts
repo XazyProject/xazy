@@ -48,4 +48,9 @@ export const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+    pre code {
+        overflow: visible!important;
+        padding: 2em;
+    }
 `;
