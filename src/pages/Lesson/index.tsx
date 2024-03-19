@@ -4,6 +4,8 @@ import { LessonDiv, LessonLayout, Socials } from "./lessons.styled";
 import GITHUB from "../../assets/images/GITHUB.svg";
 import INSTAGRAM from "../../assets/images/INSTAGRAM.svg";
 import { useParams } from "react-router-dom";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
 
 const Lesson: React.FC = () => {
   const { courseName, chapter, link } = useParams<{
@@ -16,9 +18,14 @@ const Lesson: React.FC = () => {
   const [post, setPost] = useState<string>("");
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
-  document.querySelectorAll("a").forEach((anchor) => {
-    anchor.setAttribute("target", "_blank");
-  });
+
+  const highlightCode = () => {
+    const codeBlocks = document.querySelectorAll("pre code");
+    codeBlocks.forEach((codeBlock) => {
+      hljs.highlightBlock(codeBlock as HTMLElement);
+    });
+  };
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -30,6 +37,7 @@ const Lesson: React.FC = () => {
           res.text(),
         );
         setPost(markdownContent);
+        highlightCode();
       } catch (err) {
         console.log(err);
       }
