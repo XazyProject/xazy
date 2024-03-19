@@ -20,6 +20,7 @@
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.69.7",
     "styled-components": "^6.1.8",
     "typescript": "^4.9.5",
@@ -32,7 +33,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix"
-    
   },
   "eslintConfig": {
     "extends": [
