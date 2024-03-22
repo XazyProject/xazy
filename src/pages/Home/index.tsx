@@ -12,6 +12,7 @@ import BuildIcon from "../../assets/images/build.png";
 import foundationsCourse from "../../assets/images/foundationsCourse.png";
 import sashualoHtmlCss from "../../assets/images/intermediateHtmlCss.jpg";
 import underConstruction from "../../assets/images/underConstruction.png";
+import { useEffect } from "react";
 
 const homeCourses = [
   {
@@ -89,6 +90,9 @@ const homeCourses = [
 ];
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "პროგრამირების უფასო გაკვეთილები | XAZY.GE";
+  });
   return (
     <HomeLayout>
       <HomeIntro>

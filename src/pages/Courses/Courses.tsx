@@ -1,7 +1,7 @@
 import { CoursesLayout } from "./styled";
 import { courseData } from "./courseData";
 import CourseCard from "./CourseCard";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 export interface ICourseProps {
   img: string;
@@ -13,6 +13,9 @@ export interface ICourseProps {
 }
 
 const Courses: FC<ICourseProps> = () => {
+  useEffect(() => {
+    document.title = "პროგრამირების უფასო გაკვეთილები | კურსები | XAZY.GE";
+  });
   return (
     <CoursesLayout>
       {courseData.map((course, index) => (

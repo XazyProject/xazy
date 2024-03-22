@@ -104,6 +104,15 @@ const Lesson: React.FC = () => {
     }
   };
 
+  // ეძებს h1 ელემენტს და სვავს ამ ელემენტში არსებულ კონტენტს title-ში.
+  useEffect(() => {
+    const h1Element = document.querySelector("h1");
+    if (h1Element) {
+      const pageTitle = `${h1Element.textContent || h1Element.innerText} | პროგრამირების უფასო კურსი | XAZY`;
+      document.title = pageTitle;
+    }
+  }, [post]);
+
   return (
     <LessonLayout>
       <div className="navigation">

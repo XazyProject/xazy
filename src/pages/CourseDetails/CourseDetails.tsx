@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { fundamentalebi, sashualoDonisHtmlCss } from "./courseDetailsData";
 import { CourseDetailsCard, CourseDetailsLayout } from "./styled";
+import { useEffect } from "react";
 
 const CourseDetails = () => {
   const { courseName } = useParams<{ courseName: string }>();
@@ -11,6 +12,17 @@ const CourseDetails = () => {
       : courseName === "sashualoDonisHtmlCss"
         ? sashualoDonisHtmlCss
         : [];
+
+  const courseNameGeo =
+    courseName === "fundamentalebi"
+      ? "პროგრამირების საფუძვლები"
+      : courseName === "sashualoDonisHtmlCss"
+        ? "საშუალო დონის HTML და CSS კურსი"
+        : "";
+
+  useEffect(() => {
+    document.title = `${courseNameGeo} | XAZY`;
+  });
 
   return (
     <CourseDetailsLayout>

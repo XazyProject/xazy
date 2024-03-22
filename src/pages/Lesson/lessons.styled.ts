@@ -11,7 +11,8 @@ export const LessonLayout = styled.div`
 
     ul {
       position: sticky;
-      height: min(400px, 70vh);
+      height: 75vh;
+      opacity: 0.7;
       top: 10px;
       overflow-y: scroll;
       width: 90%;
@@ -182,7 +183,7 @@ export const Socials = styled.div`
 export const LessonDiv = styled.div`
   margin: 0 auto;
   color: ${colors.textDarkSecond};
-  max-width: 800px;
+  max-width: 750px;
   min-width: 100px;
   margin: 0 auto;
   padding: 0 20px;
@@ -223,7 +224,7 @@ export const LessonDiv = styled.div`
   }
 
   img {
-    max-width: 800px;
+    max-width: 750px;
   }
 
   .navigation {
@@ -366,7 +367,7 @@ export const LessonDiv = styled.div`
   p {
     font-size: 16px;
     margin: 20px 0;
-    line-height: 1.75;
+    line-height: 2;
   }
 
   ul {
@@ -387,6 +388,8 @@ export const LessonDiv = styled.div`
     color: ${colors.xazyRed};
     background: ${colors.secondaryDark};
     border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 
   pre {
