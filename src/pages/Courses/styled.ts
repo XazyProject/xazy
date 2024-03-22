@@ -112,8 +112,6 @@ export const CourseLogo = styled.div`
     width: 100px;
     object-fit: cover;
     border-radius: 100%;
-    background-color: ${colors.gray};
-    border: 3px solid ${colors.xazyRed};
   }
 
   @media screen and (max-width: 768px) {

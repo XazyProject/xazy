@@ -172,7 +172,6 @@ export const HomeCourses = styled.div`
 
     img {
       border-radius: 100%;
-      border: 3px solid ${colors.xazyRed};
       width: 156px;
       height: 156px;
       object-fit: cover;

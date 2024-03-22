@@ -12,7 +12,8 @@ export const LessonLayout = styled.div`
     ul {
       position: sticky;
       height: 75vh;
-      opacity: 0.7;
+      color: #ababab;
+      /* opacity: 0.7; */
       top: 10px;
       overflow-y: scroll;
       width: 90%;
@@ -181,11 +182,10 @@ export const Socials = styled.div`
 `;
 
 export const LessonDiv = styled.div`
-  margin: 0 auto;
   color: ${colors.textDarkSecond};
   max-width: 750px;
   min-width: 100px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   padding: 0 20px;
 
   a {

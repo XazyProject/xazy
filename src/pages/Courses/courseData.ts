@@ -1,6 +1,6 @@
 import { ICourseProps } from "./Courses";
 import foundationsCourse from "../../assets/images/foundationsCourse.png";
-import intermediateHtmlCss from "../../assets/images/intermediateHtmlCss.jpg";
+import intermediateHtmlCss from "../../assets/images/intermediateHtmlCss.png";
 
 export const courseData: ICourseProps[] = [
   {

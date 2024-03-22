@@ -10,7 +10,7 @@ import {
 import LearnIcon from "../../assets/images/learn.png";
 import BuildIcon from "../../assets/images/build.png";
 import foundationsCourse from "../../assets/images/foundationsCourse.png";
-import sashualoHtmlCss from "../../assets/images/intermediateHtmlCss.jpg";
+import sashualoHtmlCss from "../../assets/images/intermediateHtmlCss.png";
 import underConstruction from "../../assets/images/underConstruction.png";
 import { useEffect } from "react";
 
