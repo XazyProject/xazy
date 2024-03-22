@@ -15,10 +15,13 @@ const Lesson: React.FC = () => {
   }>();
   const file_name = `${link}`;
   console.log(courseName);
+
+  // სთეით ცვლადები
   const [post, setPost] = useState<string>("");
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
 
+  // ფუნქცია, რომელიც აფერადებს code ელემენტებს.
   const highlightCode = () => {
     const codeBlocks = document.querySelectorAll("pre code");
     codeBlocks.forEach((codeBlock) => {
@@ -26,6 +29,7 @@ const Lesson: React.FC = () => {
     });
   };
 
+  // წამოიღოს გაკვეთილის კონტენტი და გახადოს 'post' სთეითი.
   useEffect(() => {
     async function fetchData() {
       try {
@@ -45,10 +49,12 @@ const Lesson: React.FC = () => {
     fetchData();
   }, [chapter, courseName, file_name]);
 
+  // გააფერადოს კოდი markdown კონტენტის ჩატვირთვის შემდეგ
   useEffect(() => {
-    highlightCode(); // Highlight code after Markdown content is loaded
-  }, [post]); // Run when the 'post' state changes
+    highlightCode();
+  }, [post]);
 
+  // ამოიღოს ყველა h2 ელემენტი markdown-ის კონტენტიდან
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const resultArray = extractH2Elements();
@@ -57,9 +63,10 @@ const Lesson: React.FC = () => {
     }, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, [post]); // Run when the 'post' state changes
+  }, [post]);
 
-  function extractH2Elements() {
+  // ამოიღოს ყველა h2 ელემენტი markdown-ის კონტენტიდან და შეფუშოს ერეიში.
+  const extractH2Elements = () => {
     const h2Elements = document.querySelectorAll("h2");
     const h2Array: string[] = [];
 
@@ -70,14 +77,16 @@ const Lesson: React.FC = () => {
     });
 
     return h2Array;
-  }
+  };
 
+  // ნავიგაციის წევრზე handleClick
   const handleNavigationClick = (index: number) => {
     setSelectedH2Index(index);
     updateUrlHash(index);
     scrollIntoView(index);
   };
 
+  // ჩამოსქროლოს არჩეულ h2 ელემენტზე.
   const scrollIntoView = (index: number) => {
     const h2Elements = document.querySelectorAll("h2");
     if (index >= 0 && index < h2Elements.length) {
@@ -85,6 +94,7 @@ const Lesson: React.FC = () => {
     }
   };
 
+  // განაახლოს URL ჰეში არჩეული H2 ელემენტით.
   const updateUrlHash = (index: number) => {
     const selectedH2 = h2Array[index];
     const newHash = selectedH2
@@ -93,6 +103,7 @@ const Lesson: React.FC = () => {
     window.history.replaceState(null, "", newHash);
   };
 
+  // შეამოწმოს URL-ს ჰეში და ჩამოსქროლოს შესაბამის H2 ელემენტთან.
   const checkHashAndScroll = () => {
     const hash = window.location.hash.substring(1);
     const index = h2Array.findIndex(
