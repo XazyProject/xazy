@@ -1,26 +1,23 @@
-name: Update Masala
+name: Update Masala in Xazy
 
 on:
-  schedule:
-    - cron: "*/1 * * * *"
+  repository_dispatch:
+    types: [masala-updated]
 
 jobs:
   update_masala:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Checkout xazy repository
         uses: actions/checkout@v2
-
-      - name: Print current directory
-        run: pwd
-
+      
       - name: Copy Masala files
         run: cp -r ../masala/* src/masala/
-
-      - name: Commit and push changes
+        
+      - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Test GitHub Actions workflow for updating Masala files"
+          git commit -m "Update Masala files"
           git push
