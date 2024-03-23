@@ -7,17 +7,10 @@ on:
 jobs:
   update_masala:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout xazy repository
+      - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Copy Masala files
-        run: cp -r ../masala/* src/masala/
-        
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Update Masala files"
-          git push
+
+      - name: Update Masala folder
+        run: cp -r masala/* src/masala/
