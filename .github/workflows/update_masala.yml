@@ -9,12 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout masala repository
-        uses: actions/checkout@v2
-        with:
-          repository: XazyProject/masala
-          path: masala  # Specify the directory to clone into
-
       - name: Copy Masala files
         run: |
           cp -r masala/fundamentalebi/* src/masala/
