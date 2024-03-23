@@ -400,6 +400,7 @@ export const LessonDiv = styled.div`
       Ubuntu Mono,
       monospace;
     font-size: 1rem;
+    padding: 25px;
     line-height: 1.7;
     /* padding: 16px 16px 16px 60px; */
     margin: 27px 0;
@@ -427,6 +428,7 @@ export const LessonDiv = styled.div`
       line-height: 1.7;
       color: #ccc;
       background-color: ${colors.codeBg};
+      padding: 0;
     }
   }
 
