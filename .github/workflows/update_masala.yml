@@ -9,11 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout masala repository
+        uses: actions/checkout@v2
+        with:
+          repository: XazyProject/masala
+          ref: main  # Specify the default branch explicitly
+          path: masala  # Specify the directory to clone into
 
       - name: Copy Masala files
         run: |
-          cp -r ./fundamentalebi/* src/masala/
-          cp -r ./sashualoDonisHtmlCss/* src/masala/
+          cp -r masala/fundamentalebi/* src/masala/
+          cp -r masala/sashualoDonisHtmlCss/* src/masala/
           # Add more cp commands as needed for other folders or files
-      - name: Debug Token
-      - run: echo ${{ secrets.MASALA_TOKEN }}
