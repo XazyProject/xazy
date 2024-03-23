@@ -2,7 +2,7 @@ name: Update Masala
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/1 * * * *"
 
 jobs:
   update_masala:
@@ -14,17 +14,13 @@ jobs:
       - name: Print current directory
         run: pwd
 
-      - name: Navigate to masala directory
-        run: cd ../masala
-
       - name: Copy Masala files
-        run: cp -r ./* ../xazy/src/masala/
+        run: cp -r ../masala/* src/masala/
 
       - name: Commit and push changes
         run: |
-          cd ../xazy  # Navigate to the xazy repository directory
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Update Masala files"
+          git commit -m "Test GitHub Actions workflow for updating Masala files"
           git push
