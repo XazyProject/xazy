@@ -2,21 +2,24 @@ name: Update Masala
 
 on:
   schedule:
-    - cron: "0 * * * *"  # ეშვება ყოველ ერთ საათში.
+    - cron: "*/5 * * * *"
 
 jobs:
   update_masala:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
 
+      - name: Navigate to masala directory
+        run: cd ../masala
+
       - name: Copy Masala files
-        run: cp -r ../masala/* src/masala/
+        run: cp -r ./* ../xazy/src/masala/
 
       - name: Commit and push changes
         run: |
+          cd ../xazy  # Navigate to the xazy repository directory
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
