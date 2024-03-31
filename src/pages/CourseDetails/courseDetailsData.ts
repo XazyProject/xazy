@@ -164,7 +164,62 @@ export const sashualoDonisHtmlCss = [
       {
         title: "CSS ფუნქციები",
         link: "./sashualoDonisHtmlCss/2_sashualo_css_konceptebi/6_css_funqciebi",
-        project: false,
+      },
+      {
+        title: "CSS ცვლადები",
+        link: "./sashualoDonisHtmlCss/2_sashualo_css_konceptebi/7_css_cvladebi",
+      },
+      {
+        title: "ბრაუზერთან შეთავსებადობა",
+        link: "./sashualoDonisHtmlCss/2_sashualo_css_konceptebi/8_brauzertan_shetavsebadoba",
+      },
+    ],
+  },
+  {
+    title: "ფორმები",
+    content: [
+      {
+        title: "შესავალი ფორმებში",
+        link: "./sashualoDonisHtmlCss/3_formebi/1_shesavali_formebshi",
+      },
+      {
+        title: "ფორმის ვალიდაცია",
+        link: "./sashualoDonisHtmlCss/3_formebi/2_formis_validacia",
+      },
+      {
+        title: "პროექტი: რეგისტრაციის ფორმა",
+        link: "./sashualoDonisHtmlCss/3_formebi/3_proeqti_registraciis_forma",
+        project: true,
+      },
+    ],
+  },
+  {
+    title: "გრიდი",
+    content: [
+      {
+        title: "შესავალი გრიდში",
+        link: "./sashualoDonisHtmlCss/4_grid/1_shesavali_gridshi",
+      },
+      {
+        title: "გრიდის შექმნა",
+        link: "./sashualoDonisHtmlCss/4_grid/2_gridis_sheqmna",
+      },
+      {
+        title: "გრიდ ელემენტების პოზიციონირება",
+        link: "./sashualoDonisHtmlCss/4_grid/3_grid_elementebis_pozicionireba",
+      },
+      {
+        title: "გრიდის რთული სტილები",
+        link: "./sashualoDonisHtmlCss/4_grid/4_rtuli_gridis_stilebi",
+      },
+      {
+        title: "Flexbox და Grid ერთად",
+        link: "./sashualoDonisHtmlCss/4_grid/5_flexbox_da_grid_ertad",
+      },
+      {
+        title: "პროექტი: ადმინის პანელი",
+        link: "./sashualoDonisHtmlCss/4_grid/6_proeqti_adminis_paneli",
+        project: true,
       },
     ],
   },

@@ -7,11 +7,23 @@ import {
 } from "./header.styled";
 import avatarExample from "../../../assets/images/avatarExample.png";
 import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("fixed-body");
+    } else {
+      document.body.classList.remove("fixed-body");
+    }
+
+    return () => {
+      document.body.classList.remove("fixed-body");
+    };
+  }, [isOpen]);
 
   return (
     <HeadDiv>
@@ -41,12 +53,12 @@ const Header = () => {
           </li>
           <img src={avatarExample} alt="avatar" />
         </HeaderUl>
-
         <MobileNavigation className={isOpen ? "active" : "non-active"}>
+          <div className="bg"></div>
           <NavLink to="/" onClick={() => setOpen(false)}>
-            ჩემი პანელი
+            მთავარი
           </NavLink>
-          <NavLink to="/" onClick={() => setOpen(false)}>
+          <NavLink to="/courses" onClick={() => setOpen(false)}>
             გაკვეთილები
           </NavLink>
           <a

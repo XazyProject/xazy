@@ -8,7 +8,7 @@ export const courseData: ICourseProps[] = [
     title: "საფუძვლები",
     description: `ისწავლით როგორ შექმნათ უბრალო ვებ-გვერდები. გაიგებთ რას აკეთებენ ვებ-დეველოპერები და გაივლით საფუძვლებს, რაც მომდევნო კურსების სწავლაში გამოგადგებათ.`,
     link: "./fundamentalebi",
-    lessons: 22,
+    lessons: 23,
     projects: 2,
   },
   {
@@ -17,7 +17,7 @@ export const courseData: ICourseProps[] = [
     description:
       "ჩახვალთ HTML და CSS-ს სიღრმეებში და ისწავლით ბევრ გამოსადეგ ხელსაწყოს. სწავლის შემდეგ შეძლებთ საშუალო სირთულის ვებ-გვერდების აწყობას.",
     link: "./sashualoDonisHtmlCss",
-    lessons: 22,
+    lessons: 17,
     projects: 2,
   },
 ];

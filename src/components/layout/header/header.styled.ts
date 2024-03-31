@@ -75,22 +75,32 @@ export const HeaderUl = styled.ul`
 `;
 
 export const MobileNavigation = styled.div`
-  padding: 50px 0;
+  padding: 70px 0;
   background-color: ${colors.secondaryDark};
-  position: absolute;
-  right: 0;
-
-  border-bottom-left-radius: 62px;
+  position: fixed;
+  right: -250px;
+  height: 100vh;
+  top: 0;
   z-index: -3;
   border: 1px solid ${colors.gray};
   transition: all 0.3s ease-in-out;
 
+  /* .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -16;
+  } */
+
   &.active {
-    top: 67px;
+    right: 0px;
   }
 
   &.non-active {
-    top: -290px;
+    right: -290px;
   }
 
   @media screen and (min-width: 1025px) {

@@ -33,6 +33,11 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.textDark};
         font-family: "Noto Sans Georgian", sans-serif;
     }
+
+    .fixed-body {
+        overflow: hidden;
+    }
+
     ol, ul {
         list-style: none;
     }

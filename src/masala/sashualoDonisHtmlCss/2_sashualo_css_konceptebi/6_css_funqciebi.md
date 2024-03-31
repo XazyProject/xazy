@@ -79,7 +79,7 @@ main-ის მნიშვნელობას ვხდით: `100vh - (3rem
 
 თქვენ შეგიძლიათ ელემენტარული მათემატიკის გამოყენება `min()`-ში, მაგალითად: `width: min(80ch, 100vw - 2rem);`.
 
-![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualo_donis_html_css/2_sashualo_css_konceptebi/css_funqciebi_imgs/01.gif)
+![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualoDonisHtmlCss/2_sashualo_css_konceptebi/css_funqciebi_imgs/01.gif)
 
 ## max()
 
@@ -93,7 +93,7 @@ max-ზე გადაცემული ზომებიდან, ის �
 
 `max()` ფუნქცია ყველაზე სასარგებლო მაშინაა, როდესაც ბრაუზერი ძალიან პატარაა, ან მომხმარებელი ზრდის კონტენტის ზომას ბრაუზერის zoom-ის გამოყენებით. თავიდან შესაძლოა არ ჩანდეს max ფუნქცია სასარგებლოდ, მაგრამ გამოგადგებათ ისეთ პროექტებში, სადაც accessibility მნიშვნელოვანია.
 
-![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualo_donis_html_css/2_sashualo_css_konceptebi/css_funqciebi_imgs/02.gif)
+![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualoDonisHtmlCss/2_sashualo_css_konceptebi/css_funqciebi_imgs/02.gif)
 
 ## clamp()
 
@@ -111,4 +111,4 @@ h1 {
 
 `clamp()` იღებს ამ მნიშვნელობებს და ადგენს ყველაზე პატარა, იდეალურ და ყველაზე დიდ მნიშვნელობებს. ზედა მაგალითი ნიშნავს, რომ უველაზე პატარა ფონტის ზომა იქნება 320 პიქსელი, ხოლო ყველაზე დიდი იქნება 60rem. იდეალური ფონტის ზომა კი 80vw.
 
-![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualo_donis_html_css/2_sashualo_css_konceptebi/css_funqciebi_imgs/03.gif)
+![min-gif](https://raw.githubusercontent.com/XazyProject/masala/main/sashualoDonisHtmlCss/2_sashualo_css_konceptebi/css_funqciebi_imgs/03.gif)
