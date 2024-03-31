@@ -20,13 +20,10 @@ const Lesson: React.FC = () => {
   const [post, setPost] = useState<string>("");
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
-
-  // State variable to store lesson ID
   const [lessonId, setLessonId] = useState<string | undefined>(undefined);
-  // State variable to determine if the lesson ID is saved
   const [isSaved, setIsSaved] = useState<boolean>(false);
 
-  // Function to handle button click and save or remove lesson ID from local storage
+  // ფუნქცია, რომელიც კლიკლზე ინახავს ან შლის გაკვეთილის ID-ს ლოკალ სთორიჯიდან
   const handleSaveOrRemove = () => {
     if (lessonId) {
       const existingData =
@@ -50,7 +47,7 @@ const Lesson: React.FC = () => {
     }
   };
 
-  // Get lesson ID from URL parameters
+  // იღებს ID-ს URL-დან
   useEffect(() => {
     if (link) {
       setLessonId(link);
