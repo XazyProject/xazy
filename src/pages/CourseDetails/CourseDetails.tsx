@@ -3,10 +3,23 @@ import { fundamentalebi, sashualoDonisHtmlCss } from "./courseDetailsData";
 import { CourseDetailsCard, CourseDetailsLayout } from "./styled";
 import { useEffect } from "react";
 
+interface ContentItem {
+  id?: string;
+  title: string;
+  link: string;
+  project?: boolean;
+}
+
+interface CourseItem {
+  id?: string;
+  title: string;
+  content: ContentItem[];
+}
+
 const CourseDetails = () => {
   const { courseName } = useParams<{ courseName: string }>();
 
-  const courseData =
+  const courseData: CourseItem[] =
     courseName === "fundamentalebi"
       ? fundamentalebi
       : courseName === "sashualoDonisHtmlCss"
