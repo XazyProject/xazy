@@ -474,7 +474,8 @@ export const LessonDiv = styled.div`
 `;
 
 export const LessonSaveDiv = styled.div`
-  margin: 50px 0;
+  border-radius: 20px;
+  margin: 50px 0 0 0;
   width: 100%;
   background-color: ${colors.codeBg};
   display: flex;
@@ -482,7 +483,7 @@ export const LessonSaveDiv = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  height: 200px;
+  height: 150px;
 
   button {
     font-family: "Noto Sans Georgian";
