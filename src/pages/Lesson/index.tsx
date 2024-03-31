@@ -21,6 +21,46 @@ const Lesson: React.FC = () => {
   const [h2Array, setH2Array] = useState<string[]>([]);
   const [selectedH2Index, setSelectedH2Index] = useState<number | null>(null);
 
+  // State variable to store lesson ID
+  const [lessonId, setLessonId] = useState<string | undefined>(undefined);
+  // State variable to determine if the lesson ID is saved
+  const [isSaved, setIsSaved] = useState<boolean>(false);
+
+  // Function to handle button click and save or remove lesson ID from local storage
+  const handleSaveOrRemove = () => {
+    if (lessonId) {
+      const existingData =
+        localStorage.getItem(`${courseName}-completed`) || "[]";
+      const lessonIds = JSON.parse(existingData);
+      if (isSaved) {
+        const updatedLessonIds = lessonIds.filter(
+          (id: string) => id !== lessonId,
+        );
+        localStorage.setItem(
+          `${courseName}-completed`,
+          JSON.stringify(updatedLessonIds),
+        );
+      } else {
+        localStorage.setItem(
+          `${courseName}-completed`,
+          JSON.stringify([...lessonIds, lessonId]),
+        );
+      }
+      setIsSaved(!isSaved);
+    }
+  };
+
+  // Get lesson ID from URL parameters
+  useEffect(() => {
+    if (link) {
+      setLessonId(link);
+      const existingData =
+        localStorage.getItem(`${courseName}-completed`) || "[]";
+      const lessonIds = JSON.parse(existingData);
+      setIsSaved(lessonIds.includes(link));
+    }
+  }, [link]);
+
   // ფუნქცია, რომელიც აფერადებს code ელემენტებს.
   const highlightCode = () => {
     const codeBlocks = document.querySelectorAll("pre code");
@@ -165,6 +205,9 @@ const Lesson: React.FC = () => {
       </div>
       <LessonDiv>
         <Markdown>{post}</Markdown>
+        <button onClick={handleSaveOrRemove}>
+          {isSaved ? "Remove Lesson ID" : "Save Lesson ID"}
+        </button>
       </LessonDiv>
     </LessonLayout>
   );

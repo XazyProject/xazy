@@ -22,6 +22,7 @@ interface CourseItem {
 
 const CourseDetails = () => {
   const { courseName } = useParams<{ courseName: string }>();
+  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
 
   const courseData: CourseItem[] =
     courseName === "fundamentalebi"
@@ -41,8 +42,6 @@ const CourseDetails = () => {
     document.title = `${courseNameGeo} | XAZY`;
   });
 
-  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
-
   useEffect(() => {
     const savedCompletedLessons = localStorage.getItem(
       `${courseName}-completed`,
@@ -52,24 +51,28 @@ const CourseDetails = () => {
     }
   }, [courseName]);
 
-  const handleLessonClick = (lessonId: string) => {
-    if (!completedLessons.includes(lessonId)) {
-      const updatedCompletedLessons = [...completedLessons, lessonId];
-      setCompletedLessons(updatedCompletedLessons);
-      localStorage.setItem(
-        `${courseName}-completed`,
-        JSON.stringify(updatedCompletedLessons),
-      );
+  // ეს ფუნქცია ნიშნავს დასრულებულ და დაუსრულებელ ლექციებს.
+  const handleLessonClick = (lessonLink: string) => {
+    const lastSlashIndex = lessonLink.lastIndexOf("/");
+    const extractedLink = lessonLink.substring(lastSlashIndex + 1);
+    let updatedCompletedLessons: string[];
+    if (!completedLessons.includes(extractedLink)) {
+      updatedCompletedLessons = [...completedLessons, extractedLink];
     } else {
-      const updatedCompletedLessons = completedLessons.filter(
-        (id) => id !== lessonId,
-      );
-      setCompletedLessons(updatedCompletedLessons);
-      localStorage.setItem(
-        `${courseName}-completed`,
-        JSON.stringify(updatedCompletedLessons),
+      updatedCompletedLessons = completedLessons.filter(
+        (link) => link !== extractedLink,
       );
     }
+    setCompletedLessons(updatedCompletedLessons);
+    localStorage.setItem(
+      `${courseName}-completed`,
+      JSON.stringify(updatedCompletedLessons),
+    );
+  };
+
+  const getLastPartOfLink = (link: string) => {
+    const parts = link.split("/");
+    return parts[parts.length - 1];
   };
 
   return (
@@ -111,11 +114,15 @@ const CourseDetails = () => {
               </a>
               <CourseDetailsDone
                 style={{
-                  backgroundColor: completedLessons.includes(content.id || "")
+                  backgroundColor: completedLessons.includes(
+                    getLastPartOfLink(content.link),
+                  )
                     ? "#7fff00"
                     : "#757575",
                 }}
-                onClick={() => handleLessonClick(content.id || "")}
+                onClick={() =>
+                  handleLessonClick(getLastPartOfLink(content.link))
+                }
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
