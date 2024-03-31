@@ -472,3 +472,52 @@ export const LessonDiv = styled.div`
     border-radius: 6px;
   }
 `;
+
+export const LessonSaveDiv = styled.div`
+  margin: 50px 0;
+  width: 100%;
+  background-color: ${colors.codeBg};
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 200px;
+
+  button {
+    font-family: "Noto Sans Georgian";
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 40%;
+    min-width: 225px;
+  }
+
+  a {
+    background-color: ${colors.mainDark};
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(117, 117, 117);
+    height: 75px;
+    line-height: 75px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: ${colors.mainLight};
+    width: 40%;
+    font-size: 20px;
+    min-width: 225px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: ${colors.mainLight};
+    }
+  }
+`;

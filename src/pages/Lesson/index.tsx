@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
-import { LessonDiv, LessonLayout, Socials } from "./lessons.styled";
+import {
+  LessonDiv,
+  LessonLayout,
+  LessonSaveDiv,
+  Socials,
+} from "./lessons.styled";
 import GITHUB from "../../assets/images/GITHUB.svg";
 import INSTAGRAM from "../../assets/images/INSTAGRAM.svg";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 
@@ -161,6 +166,12 @@ const Lesson: React.FC = () => {
     }
   }, [post]);
 
+  // იღებს კურსის სახელს URL დან.
+  const currentPath = window.location.pathname;
+  const parts = currentPath.split("/");
+  parts.splice(-2);
+  const coursePath = parts.join("/");
+
   return (
     <LessonLayout>
       <div className="navigation">
@@ -202,9 +213,22 @@ const Lesson: React.FC = () => {
       </div>
       <LessonDiv>
         <Markdown>{post}</Markdown>
-        <button onClick={handleSaveOrRemove}>
-          {isSaved ? "Remove Lesson ID" : "Save Lesson ID"}
-        </button>
+        {post ? (
+          <LessonSaveDiv>
+            <Link to={coursePath}>📖 კურსზე დაბრუნება</Link>
+            <button
+              onClick={handleSaveOrRemove}
+              style={{
+                backgroundColor: `${isSaved ? "#ff2768" : "#4ade80"}`,
+                color: `${isSaved ? "#fff" : "#000"}`,
+              }}
+            >
+              {isSaved ? "✘ მონიშნე დაუსრულებლად" : "✔️ მონიშნე დასრულებულად"}
+            </button>
+          </LessonSaveDiv>
+        ) : (
+          ""
+        )}
       </LessonDiv>
     </LessonLayout>
   );
