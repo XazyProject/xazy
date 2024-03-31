@@ -3,7 +3,7 @@ import { colors } from "../../styles/colors";
 
 export const CourseDetailsLayout = styled.div`
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 80px auto;
   padding: 0 20px;
 `;
 
@@ -69,4 +69,32 @@ export const CourseDetailsDone = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const CourseDetailsProgress = styled.div`
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .progress {
+    background-color: rgb(117, 117, 117);
+    width: 70%;
+    border-radius: 5px;
+    height: 20px;
+    margin: 0 auto 30px auto;
+
+    div {
+      height: 100%;
+      background-color: #4ade80;
+      border-radius: 5px;
+    }
+  }
 `;

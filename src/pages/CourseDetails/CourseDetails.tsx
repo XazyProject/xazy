@@ -4,6 +4,7 @@ import {
   CourseDetailsCard,
   CourseDetailsDone,
   CourseDetailsLayout,
+  CourseDetailsProgress,
 } from "./styled";
 import { useEffect, useState } from "react";
 
@@ -23,6 +24,7 @@ interface CourseItem {
 const CourseDetails = () => {
   const { courseName } = useParams<{ courseName: string }>();
   const [completedLessons, setCompletedLessons] = useState<string[]>([]);
+  const [progress, setProgress] = useState<number>(0);
 
   const courseData: CourseItem[] =
     courseName === "fundamentalebi"
@@ -33,7 +35,7 @@ const CourseDetails = () => {
 
   const courseNameGeo =
     courseName === "fundamentalebi"
-      ? "პროგრამირების საფუძვლები"
+      ? "საფუძვლები"
       : courseName === "sashualoDonisHtmlCss"
         ? "საშუალო დონის HTML და CSS კურსი"
         : "";
@@ -50,6 +52,17 @@ const CourseDetails = () => {
       setCompletedLessons(JSON.parse(savedCompletedLessons));
     }
   }, [courseName]);
+
+  // ითვლის პროგრესს.
+  useEffect(() => {
+    let totalLessons = 0;
+    courseData.forEach((item) => {
+      totalLessons += item.content.length;
+    });
+    const completedCount = completedLessons.length;
+    const completionPercentage = (completedCount / totalLessons) * 100;
+    setProgress(completionPercentage);
+  }, [completedLessons]);
 
   // ეს ფუნქცია ნიშნავს დასრულებულ და დაუსრულებელ ლექციებს.
   const handleLessonClick = (lessonLink: string) => {
@@ -77,6 +90,19 @@ const CourseDetails = () => {
 
   return (
     <CourseDetailsLayout>
+      <CourseDetailsProgress>
+        <h1>{courseNameGeo}</h1>
+        <div>
+          <p>თქვენი პროგრესი: {Math.round(progress)}%</p>
+          <div className="progress">
+            <div
+              style={{
+                width: `${progress}%`,
+              }}
+            ></div>
+          </div>
+        </div>
+      </CourseDetailsProgress>
       {courseData.map((item, index) => (
         <CourseDetailsCard key={`course-details-card-${index}`}>
           <h2>{item.title}</h2>
@@ -117,7 +143,7 @@ const CourseDetails = () => {
                   backgroundColor: completedLessons.includes(
                     getLastPartOfLink(content.link),
                   )
-                    ? "#7fff00"
+                    ? "#4ade80"
                     : "#757575",
                 }}
                 onClick={() =>
