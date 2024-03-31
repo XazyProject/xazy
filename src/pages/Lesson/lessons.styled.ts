@@ -483,7 +483,7 @@ export const LessonSaveDiv = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  height: 150px;
+  padding: 30px 0;
 
   button {
     font-family: "Noto Sans Georgian";
@@ -510,7 +510,7 @@ export const LessonSaveDiv = styled.div`
     color: ${colors.mainLight};
     width: 40%;
     font-size: 20px;
-    min-width: 225px;
+    min-width: 255px;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.2);
