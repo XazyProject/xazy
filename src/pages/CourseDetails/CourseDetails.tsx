@@ -1,7 +1,11 @@
 import { useParams } from "react-router-dom";
 import { fundamentalebi, sashualoDonisHtmlCss } from "./courseDetailsData";
-import { CourseDetailsCard, CourseDetailsLayout } from "./styled";
-import { useEffect } from "react";
+import {
+  CourseDetailsCard,
+  CourseDetailsDone,
+  CourseDetailsLayout,
+} from "./styled";
+import { useEffect, useState } from "react";
 
 interface ContentItem {
   id?: string;
@@ -36,6 +40,37 @@ const CourseDetails = () => {
   useEffect(() => {
     document.title = `${courseNameGeo} | XAZY`;
   });
+
+  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
+
+  useEffect(() => {
+    const savedCompletedLessons = localStorage.getItem(
+      `${courseName}-completed`,
+    );
+    if (savedCompletedLessons) {
+      setCompletedLessons(JSON.parse(savedCompletedLessons));
+    }
+  }, [courseName]);
+
+  const handleLessonClick = (lessonId: string) => {
+    if (!completedLessons.includes(lessonId)) {
+      const updatedCompletedLessons = [...completedLessons, lessonId];
+      setCompletedLessons(updatedCompletedLessons);
+      localStorage.setItem(
+        `${courseName}-completed`,
+        JSON.stringify(updatedCompletedLessons),
+      );
+    } else {
+      const updatedCompletedLessons = completedLessons.filter(
+        (id) => id !== lessonId,
+      );
+      setCompletedLessons(updatedCompletedLessons);
+      localStorage.setItem(
+        `${courseName}-completed`,
+        JSON.stringify(updatedCompletedLessons),
+      );
+    }
+  };
 
   return (
     <CourseDetailsLayout>
@@ -74,6 +109,30 @@ const CourseDetails = () => {
                 )}
                 {content.title}
               </a>
+              <CourseDetailsDone
+                style={{
+                  backgroundColor: completedLessons.includes(content.id || "")
+                    ? "#7fff00"
+                    : "#757575",
+                }}
+                onClick={() => handleLessonClick(content.id || "")}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  id="check"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <polyline
+                    fill="none"
+                    stroke="#000000"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="64"
+                    points="216 72.005 104 184 48 128.005"
+                  ></polyline>
+                </svg>
+              </CourseDetailsDone>
             </div>
           ))}
         </CourseDetailsCard>

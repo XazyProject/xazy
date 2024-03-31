@@ -31,14 +31,16 @@ export const CourseDetailsCard = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-
-    &:hover {
-      background-color: #374151;
-    }
   }
 
   div {
+    display: flex;
+    align-items: center;
     padding: 0 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #374151;
+    }
   }
 
   svg {
@@ -56,4 +58,15 @@ export const CourseDetailsCard = styled.div`
       line-height: 1.5;
     }
   }
+`;
+
+export const CourseDetailsDone = styled.div`
+  width: 30px;
+  height: 30px;
+  /* border: 2px solid #919191; */
+  border-radius: 100%;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
