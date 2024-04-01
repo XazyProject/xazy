@@ -5,6 +5,7 @@ import Courses from "../pages/Courses/Courses";
 import CourseDetails from "../pages/CourseDetails/CourseDetails";
 import Home from "pages/Home";
 import { useEffect } from "react";
+import Contribute from "pages/Contribute";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -23,6 +24,7 @@ const AllRoutes = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/contribute" element={<Contribute />} />
           <Route
             path="/courses"
             element={

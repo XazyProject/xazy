@@ -49,7 +49,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <NavLink to="/">მხარდაჭერა</NavLink>
+            <NavLink to="/contribute">მხარდაჭერა</NavLink>
           </li>
           <img src={avatarExample} alt="avatar" />
         </HeaderUl>
@@ -69,7 +69,7 @@ const Header = () => {
           >
             შემოგვიერთდი
           </a>
-          <NavLink to="/" onClick={() => setOpen(false)}>
+          <NavLink to="/contribute" onClick={() => setOpen(false)}>
             მხარდაჭერა
           </NavLink>
         </MobileNavigation>
