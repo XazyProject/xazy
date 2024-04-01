@@ -5,6 +5,15 @@ export const ContributeContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+
+  .first-link {
+    display: block;
+    text-align: center;
+    color: ${colors.link};
+    margin: 30px 0;
+    font-size: 20px;
+  }
+
   h1 {
     font-size: 26px;
     text-align: center;

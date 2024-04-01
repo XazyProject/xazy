@@ -15,6 +15,14 @@ const Contribute = () => {
         დამატება და ა.შ. ამით შევძლებთ შევქმნათ სრულფასოვანი და ყვევლასთვის
         ხელმისაწვდომი პროგრამირების სასწავლო სივრცე ქართულ ენაზე.
       </p>
+      <a
+        className="first-link"
+        target="_blank"
+        href="https://github.com/XazyProject/xazy/blob/main/.github/CONTRIBUTING.md"
+        rel="noreferrer"
+      >
+        გაკვეთილი - როგორ შევიტანოთ წვლილი.
+      </a>
       <h2>წვლილის შეტანა შეგიძლიათ ორი გზით:</h2>
       <ContributeCardsHolder>
         <ContributeCard>
