@@ -1,0 +1,17 @@
+// variables and global styles
+@import './colors';
+@import './globals';
+
+// components
+@import './loading';
+
+// layout
+@import './header';
+@import './footer';
+
+// pages
+@import './home';
+@import './contribute';
+@import './courses';
+@import './courseDetailsPage';
+@import './lesson';
