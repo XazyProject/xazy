@@ -1,0 +1,116 @@
+@import './colors';
+
+.head-div {
+  border-bottom: 3px solid $gray;
+  background-color: $main-dark;
+  position: sticky;
+  width: 100%;
+  z-index: 5;
+}
+
+.header-layout {
+  display: flex;
+  margin: 0 auto;
+  padding: 8px 32px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+
+  svg {
+    @media screen and (max-width: 1024px) {
+      width: 140px;
+      margin: 5px 0;
+    }
+  }
+}
+
+.header-ul {
+  display: flex;
+  gap: 32px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+
+  div.hamburger-react {
+    display: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    gap: 10px;
+
+    ul {
+      list-style-type: none;
+      display: none;
+    }
+
+    div.hamburger-react {
+      display: block;
+      order: 1;
+    }
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+      outline: 3px solid $xazy-red;
+    }
+  }
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 10px;
+
+    &:hover {
+      border-radius: 5px;
+      background-color: $gray;
+    }
+  }
+
+  a {
+    color: $text-dark-second;
+    text-decoration: none;
+  }
+}
+
+.mobile-navigation {
+  padding: 70px 0;
+  background-color: $secondary-dark;
+  position: fixed;
+  right: -250px;
+  height: 100vh;
+  top: 0;
+  z-index: -3;
+  border: 1px solid $gray;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    right: 0px;
+  }
+
+  &.non-active {
+    right: -290px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+
+  a {
+    text-align: center;
+    display: block;
+    color: $text-dark-second;
+    text-decoration: none;
+    padding: 15px 60px;
+
+    &:hover {
+      background-color: $gray;
+      color: $xazy-red;
+    }
+  }
+}
