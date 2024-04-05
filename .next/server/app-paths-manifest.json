@@ -1,0 +1,11 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/opengraph-image.png/route": "app/opengraph-image.png/route.js",
+  "/courses/page": "app/courses/page.js",
+  "/contribute/page": "app/contribute/page.js",
+  "/courses/[courseName]/[chapter]/[lesson]/page": "app/courses/[courseName]/[chapter]/[lesson]/page.js",
+  "/courses/[courseName]/page": "app/courses/[courseName]/page.js"
+}
