@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     template: "%s | XAZY",
   },
   description: "ვებ-დეველოპმენტის გაკვეთილები, პროგრამირების უფასო კურსები, Javascript, HTML, CSS, REACT, GIT, GitHub სწავლა ქართულად. ალგორითმები ქართულად",
+  keywords: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "TypeScript",
+  ],
 };
 
 export default function RootLayout({
