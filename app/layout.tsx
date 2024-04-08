@@ -20,6 +20,13 @@ export const metadata: Metadata = {
     "React",
     "TypeScript",
   ],
+  metadataBase: new URL('http://xazy.ge/'),
+  openGraph: {
+    images: './opengraph-image.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  }
 };
 
 export default function RootLayout({
