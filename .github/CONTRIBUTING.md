@@ -188,7 +188,7 @@ git remote add upstream git@github.com:XazyProject/<repo name>.git
 git remote add upstream https://github.com/XazyProject/<repo name>.git
 
 # მაგალითი:
-git remote add upstream https://github.com/TheOdinProject/masala.git
+git remote add upstream https://github.com/XazyProject/masala.git
 ```
 
 ### მუშაობა
