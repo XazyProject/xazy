@@ -9,7 +9,7 @@ const Navigation: React.FC<NavigationProps> = ({
   selectedH2Index,
   handleNavigationClick,
 }) => (
-  <div className="navigation">
+  <aside className="navigation">
     <ul>
       <h4>სარჩევი</h4>
       {h2Array.map((item, index) => (
@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({
         </li>
       ))}
     </ul>
-  </div>
+  </aside>
 );
 
 export default Navigation;

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="footer-layout">
+    <footer className="footer-layout">
       <div className="footer-container">
         <div className="footer-left">
           <Link href="/" aria-label="Home">
@@ -46,7 +46,7 @@ const Footer = () => {
           <Link href="/contribute" aria-label="Contribute">მასალის მოწოდება</Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

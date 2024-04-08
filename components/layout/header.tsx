@@ -23,12 +23,12 @@ const Header = () => {
   };
 
   return (
-    <div className="head-div">
+    <header className="head-div">
       <div className="header-layout">
         <Link href="/" aria-label="Home">
           <SiteLogo />
         </Link>
-        <div className="header-ul">
+        <nav className="header-ul">
           <Hamburger toggled={isOpen} toggle={handleToggle} aria-label="Menu Toggle" />
           <ul>
             <li><Link href="/" onClick={closeMobileNavigation}  aria-label="Home">მთავარი</Link></li>
@@ -36,10 +36,10 @@ const Header = () => {
             <li><Link href="https://discord.gg/3z7sxqMTaj" target="_blank" onClick={closeMobileNavigation} aria-label="Discord">შემოგვიერთდი</Link></li>
             <li><Link href="/contribute" onClick={closeMobileNavigation} aria-label="Contribution">მხარდაჭერა</Link></li>
           </ul>
-        </div>
+        </nav>
         <MobileNavigation isOpen={isOpen} closeNavigation={closeMobileNavigation} />
       </div>
-    </div>
+    </header>
   );
 };
 

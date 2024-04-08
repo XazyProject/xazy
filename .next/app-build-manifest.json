@@ -14,7 +14,7 @@
       "static/chunks/main-app-b91823e19cd07e63.js",
       "static/chunks/250-bf2320e7393f48b9.js",
       "static/css/bf396fa40f72cd14.css",
-      "static/chunks/app/layout-4236860812078893.js"
+      "static/chunks/app/layout-71c2ddec04ee36d8.js"
     ],
     "/page": [
       "static/chunks/webpack-bbf4d91b8316f0af.js",
@@ -24,6 +24,20 @@
       "static/chunks/250-bf2320e7393f48b9.js",
       "static/chunks/749-35d7c109c16b3dca.js",
       "static/chunks/app/page-728a6c8a62853f23.js"
+    ],
+    "/contribute/page": [
+      "static/chunks/webpack-bbf4d91b8316f0af.js",
+      "static/chunks/fd9d1056-d56fe1854c3fa63f.js",
+      "static/chunks/69-648dfb9e8f97c05f.js",
+      "static/chunks/main-app-b91823e19cd07e63.js",
+      "static/chunks/app/contribute/page-6beaa17070c562e6.js"
+    ],
+    "/contribute/layout": [
+      "static/chunks/webpack-bbf4d91b8316f0af.js",
+      "static/chunks/fd9d1056-d56fe1854c3fa63f.js",
+      "static/chunks/69-648dfb9e8f97c05f.js",
+      "static/chunks/main-app-b91823e19cd07e63.js",
+      "static/chunks/app/contribute/layout-1fcf397c915f8f08.js"
     ],
     "/courses/page": [
       "static/chunks/webpack-bbf4d91b8316f0af.js",
@@ -41,26 +55,12 @@
       "static/chunks/main-app-b91823e19cd07e63.js",
       "static/chunks/app/courses/layout-1b83257a0c39b7fc.js"
     ],
-    "/contribute/page": [
-      "static/chunks/webpack-bbf4d91b8316f0af.js",
-      "static/chunks/fd9d1056-d56fe1854c3fa63f.js",
-      "static/chunks/69-648dfb9e8f97c05f.js",
-      "static/chunks/main-app-b91823e19cd07e63.js",
-      "static/chunks/app/contribute/page-88deea5ec651043a.js"
-    ],
-    "/contribute/layout": [
-      "static/chunks/webpack-bbf4d91b8316f0af.js",
-      "static/chunks/fd9d1056-d56fe1854c3fa63f.js",
-      "static/chunks/69-648dfb9e8f97c05f.js",
-      "static/chunks/main-app-b91823e19cd07e63.js",
-      "static/chunks/app/contribute/layout-6c0c89544d949794.js"
-    ],
     "/courses/[courseName]/layout": [
       "static/chunks/webpack-bbf4d91b8316f0af.js",
       "static/chunks/fd9d1056-d56fe1854c3fa63f.js",
       "static/chunks/69-648dfb9e8f97c05f.js",
       "static/chunks/main-app-b91823e19cd07e63.js",
-      "static/chunks/app/courses/[courseName]/layout-6e678f57b3f56e6d.js"
+      "static/chunks/app/courses/[courseName]/layout-be6056b5cc329fbd.js"
     ],
     "/courses/[courseName]/[chapter]/[lesson]/page": [
       "static/chunks/webpack-bbf4d91b8316f0af.js",
