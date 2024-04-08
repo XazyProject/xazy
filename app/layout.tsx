@@ -3,6 +3,7 @@ import { Noto_Sans_Georgian } from "next/font/google";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import '../styles/index.scss'
+import { Analytics } from "@vercel/analytics/react"
 
 const NotoSansGeorgian = Noto_Sans_Georgian({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Header />
         <main>
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>

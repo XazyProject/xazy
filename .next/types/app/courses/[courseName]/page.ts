@@ -1,4 +1,4 @@
-// File: C:\Users\user\Desktop\bym\yvelastvis\xazy-next\app\courses\[courseName]\page.tsx
+// File: C:\Users\user\Desktop\bym\yvelastvis\xazy\xazy\app\courses\[courseName]\page.tsx
 import * as entry from '../../../../../app/courses/[courseName]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
