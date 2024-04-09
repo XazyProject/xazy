@@ -3,6 +3,7 @@ import LearnIcon from "../assets/images/learn.png";
 import BuildIcon from "../assets/images/build.png";
 import foundationsCourse from "../assets/images/foundationsCourse.png";
 import sashualoHtmlCss from "../assets/images/intermediateHtmlCss.png";
+import advancedHtmlCss from "../assets/images/advancedHtmlCss.png"
 import underConstruction from "../assets/images/underConstruction.png";
 import Image from "next/image";
 
@@ -20,10 +21,10 @@ const homeCourses = [
     done: true,
   },
   {
-    img: underConstruction,
+    img: advancedHtmlCss,
     name: "რთული HTML და CSS",
-    link: "/",
-    done: false,
+    link: "./courses/rtuliHtmlCss",
+    done: true,
   },
   {
     img: underConstruction,
