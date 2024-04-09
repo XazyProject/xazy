@@ -1,25 +1,36 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/courses/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/courses/page.js"
-    ],
     "/courses/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/courses/layout.js"
+    ],
+    "/courses/[courseName]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/courses/[courseName]/page.js"
+    ],
+    "/courses/[courseName]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/courses/[courseName]/layout.js"
+    ],
+    "/courses/[courseName]/[chapter]/[lesson]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/courses/[courseName]/[chapter]/[lesson]/page.css",
+      "static/chunks/app/courses/[courseName]/[chapter]/[lesson]/page.js"
     ]
   }
 }
