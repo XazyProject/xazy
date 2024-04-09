@@ -2,6 +2,7 @@
 import { ICourseProps } from "./page";
 import foundationsCourse from "../../assets/images/foundationsCourse.png";
 import intermediateHtmlCss from "../../assets/images/intermediateHtmlCss.png";
+import advancedHtmlCss from "../../assets/images/advancedHtmlCss.png";
 
 export const courseData: ICourseProps[] = [
   {
@@ -20,5 +21,14 @@ export const courseData: ICourseProps[] = [
     link: "./sashualoDonisHtmlCss",
     lessons: 17,
     projects: 2,
+  },
+  {
+    img: advancedHtmlCss,
+    title: "რთული HTML & CSS",
+    description:
+      "დროა უფრო ღრმად ჩახვიდეთ და გახდეთ CSS ექსპერტი. ამდენი კურსის შემდეგ ისწავლით, როგორ მოარგოთ საიტი ყველა მოწყობილობას და გახადოთ გვერდი ხელმისაწვდომი შეზღუდული შესაძლებლობის მქონე მომხმარებლებისთვის",
+    link: "./rtuliHtmlCss",
+    lessons: 15,
+    projects: 1,
   },
 ];

@@ -17,7 +17,7 @@
 
 სანამ რაიმეს ახსნას დავიწყებთ, ხშირად მოუბრუნდით სწავლისას ამ ფოტოს, რათა განზომილებები უკეთ გაიაზროთ.
 
-![axis](./transformacia-imgs/01.jpg)
+![axis](https://raw.githubusercontent.com/XazyProject/masala/main/rtuliHtmlCss/1_animacia/transformacia-imgs/01.jpg)
 
 `transform` სტილი იღებს ერთ ან მეტ CSS ტრანსფორმაციის ფუნქციას მნიშვნელობად, ხოლო თავად მნიშვნელობებიც იღებენ რაიმე მნიშვნელობას, ძირითადად კუთხეს ან რიცხვს.
 

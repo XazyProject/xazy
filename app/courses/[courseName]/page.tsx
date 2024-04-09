@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import { fundamentalebi, sashualoDonisHtmlCss } from './courseDetailsData';
+import { fundamentalebi, sashualoDonisHtmlCss, rtuliHtmlCss } from './courseDetailsData';
 import Progress from '@/components/CourseDetailsPage/Progress';
 import CourseCard from '@/components/CourseDetailsPage/CourseCard';
 
@@ -27,6 +27,8 @@ const CourseDetailsPage = ({ params }: any) => {
       ? fundamentalebi
       : courseName === 'sashualoDonisHtmlCss'
       ? sashualoDonisHtmlCss
+      : courseName === 'rtuliHtmlCss'
+      ? rtuliHtmlCss
       : [];
   
   const courseNameGeo: string =
@@ -34,6 +36,8 @@ const CourseDetailsPage = ({ params }: any) => {
       ? 'საფუძველები'
       : courseName === 'sashualoDonisHtmlCss'
       ? 'საშუალო დონის HTML და CSS კურსი'
+      : courseName === 'rtuliHtmlCss'
+      ? 'რთული HTML & CSS'
       : '';
 
   useEffect(() => {

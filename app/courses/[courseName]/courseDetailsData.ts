@@ -224,3 +224,85 @@ export const sashualoDonisHtmlCss = [
     ],
   },
 ];
+
+export const rtuliHtmlCss = [
+  {
+    title: "ანიმაცია",
+    content: [
+      {
+        title: "ტრანსფორმაცია",
+        link: "./rtuliHtmlCss/1_animacia/1_transformacia",
+      },
+      {
+        title: "ტრანზიციები",
+        link: "./rtuliHtmlCss/1_animacia/2_tranziciebi",
+      },
+      {
+        title: "Keyframes",
+        link: "./rtuliHtmlCss/1_animacia/3_keyframes",
+      },
+    ],
+  },
+  {
+    title: "ხელმისაწვდომობა",
+    content: [
+      {
+        title: "შესავალი ხელმისაწვდომობაზე ვებში",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/1_shesavali_xelmisawvdomobaze_webshi",
+      },
+      {
+        title: "ვებ კონტენტის ხელმისაწვდომობის გაიდლაინი (WCAG)",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/2_web_kontentis_xelmisawvdomobis_guideline_wcag",
+      },
+      {
+        title: "სემანტიკური HTML",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/3_semantikuri_html",
+      },
+      {
+        title: "ხელმისაწვდომი ფერები",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/4_xelmisawvdomi_ferebi",
+      },
+      {
+        title: "ნავიგაცია კლავიატურით",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/5_navigacia_klaviaturit",
+      },
+      {
+        title: "შინაარსიანი ტექსტი",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/6_shinaarsiani_teqsti",
+      },
+      {
+        title: "WAI-ARIA",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/7_wai_aria",
+      },
+      {
+        title: "ხელმისაწვდომობის შემოწმება",
+        link: "./rtuliHtmlCss/2_xelmisawvdomoba/8_xelmisawvdomobis_shemowmeba",
+      },
+    ],
+  },
+  {
+    title: "რესპონსული დიზაინი",
+    content: [
+      {
+        title: "შესავალი რესპონსულ დიზაინში",
+        link: "./rtuliHtmlCss/3_responsuli_dizaini/1_shesavali_responsul_dizainshi",
+      },
+      {
+        title: "ბუნებრივი რესპონსულობა",
+        link: "./rtuliHtmlCss/3_responsuli_dizaini/2_bunebrivi_responsuloba",
+      },
+      {
+        title: "რესპონსული სურათები",
+        link: "./rtuliHtmlCss/3_responsuli_dizaini/3_responsuli_suratebi",
+      },
+      {
+        title: "Media Queries",
+        link: "./rtuliHtmlCss/3_responsuli_dizaini/4_media_queries",
+      },
+      {
+        title: "პროექტი: მთავარი გვერდი",
+        link: "./rtuliHtmlCss/3_responsuli_dizaini/5_proeqti_mtavari_gverdi",
+      },
+    ],
+  },
+];
