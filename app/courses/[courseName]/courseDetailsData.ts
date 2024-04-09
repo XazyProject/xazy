@@ -302,6 +302,7 @@ export const rtuliHtmlCss = [
       {
         title: "პროექტი: მთავარი გვერდი",
         link: "./rtuliHtmlCss/3_responsuli_dizaini/5_proeqti_mtavari_gverdi",
+        project: true,
       },
     ],
   },
