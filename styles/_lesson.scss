@@ -80,6 +80,10 @@
         }
       }
     }
+
+    @media print {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -137,6 +141,10 @@
   }
 
   @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media print {
     display: none;
   }
 }
@@ -272,6 +280,11 @@
       margin-left: -50px;
       background-color: $xazy-red;
     }
+
+    @media print {
+      color: #000;
+      text-shadow: none;
+    }
   }
 
   h2 {
@@ -280,6 +293,10 @@
     padding: 5px 0;
     color: $white;
     line-height: 1.5;
+
+    @media print {
+      color: #000;
+    }
 
     &:hover {
       cursor: pointer;
@@ -370,6 +387,10 @@
       list-style: decimal;
       padding: 5px;
     }
+
+    @media print {
+      color: #000;
+    }
   }
 
   a {
@@ -391,6 +412,10 @@
     padding: 4px 6px;
     font-size: 12px;
     border-radius: 6px;
+  }
+
+  @media print {
+    color: #000;
   }
 }
 
@@ -441,5 +466,8 @@
       text-decoration: none;
       color: $main-light;
     }
+  }
+  @media print {
+    display: none;
   }
 }
