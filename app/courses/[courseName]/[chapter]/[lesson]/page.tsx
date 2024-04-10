@@ -17,6 +17,8 @@ const Lesson: React.FC<any> = (props) => {
   const [lessonId, setLessonId] = useState<string | undefined>(undefined);
   const [isSaved, setIsSaved] = useState<boolean>(false);
   const [coursePath, setCoursePath] = useState<string>(''); // Initialize coursePath as null
+  const [metaDescription, setMetaDescription] = useState<string>("");
+
 
   // წამოიღოს გაკვეთილის კონტენტი და გახადოს 'post' სთეითი.
   useEffect(() => {
@@ -25,7 +27,8 @@ const Lesson: React.FC<any> = (props) => {
         const response = await fetch(`/masala/${urlData.courseName}/${urlData.chapter}/${urlData.lesson}.md`);
         const content = await response.text();
         setPost(content);
-        const metadataContent = content.substring(0, 160);
+        const first150Letters = content.substring(30, 190);
+        setMetaDescription(first150Letters);
       } catch (error) {
         console.error('Error fetching Markdown content:', error);
       }
@@ -33,6 +36,19 @@ const Lesson: React.FC<any> = (props) => {
 
     fetchMarkdownContent();
   }, [urlData.chapter, urlData.courseName, urlData.lesson]);
+
+  // დესქრიფშენს აყენებს
+  useEffect(() => {
+    const metaDescriptionTag = document.querySelector('meta[name="description"]');
+    if (metaDescriptionTag) {
+      metaDescriptionTag.setAttribute("content", metaDescription);
+    } else {
+      const newMetaTag = document.createElement('meta');
+      newMetaTag.setAttribute('name', 'description');
+      newMetaTag.setAttribute('content', metaDescription);
+      document.head.appendChild(newMetaTag);
+    }
+  }, [metaDescription]);
   
 
   // ფუნქცია, რომელიც კლიკლზე ინახავს ან შლის გაკვეთილის ID-ს ლოკალ სთორიჯიდან
