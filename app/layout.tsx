@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Noto_Sans_Georgian } from "next/font/google";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import '../styles/index.scss'
-import { Analytics } from "@vercel/analytics/react"
+import "../styles/index.scss";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const NotoSansGeorgian = Noto_Sans_Georgian({ subsets: ["latin"] });
 
@@ -12,21 +13,16 @@ export const metadata: Metadata = {
     default: "პროგრამირების უფასო კურსები & გაკვეთილები",
     template: "%s | XAZY",
   },
-  description: "ვებ-დეველოპმენტის გაკვეთილები, პროგრამირების უფასო კურსები, Javascript, HTML, CSS, REACT, GIT, GitHub სწავლა ქართულად. ალგორითმები ქართულად",
-  keywords: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "TypeScript",
-  ],
-  metadataBase: new URL('http://xazy.ge/'),
+  description:
+    "ვებ-დეველოპმენტის გაკვეთილები, პროგრამირების უფასო კურსები, Javascript, HTML, CSS, REACT, GIT, GitHub სწავლა ქართულად. ალგორითმები ქართულად",
+  keywords: ["HTML", "CSS", "JavaScript", "React", "TypeScript"],
+  metadataBase: new URL("http://xazy.ge/"),
   openGraph: {
-    images: './opengraph-image.png',
+    images: "./opengraph-image.png",
   },
   twitter: {
-    card: 'summary_large_image',
-  }
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +37,7 @@ export default function RootLayout({
         <main>
           {children}
           <Analytics />
+          <SpeedInsights />
         </main>
         <Footer />
       </body>
