@@ -8,7 +8,7 @@ const Loading = () => {
         <div className="loading four"></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Loading;
