@@ -1,4 +1,4 @@
-import CourseContentItem, { ContentItem } from './CourseContentItem';
+import CourseContentItem, { ContentItem } from "./CourseContentItem";
 
 interface CourseCardProps {
   title: string;
@@ -16,7 +16,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   getLastPartOfLink,
 }) => {
   return (
-    <div className='course-details-card'>
+    <div className="course-details-card">
       <h2>{title}</h2>
       {content.map((contentItem, index) => (
         <CourseContentItem

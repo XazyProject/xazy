@@ -1,6 +1,6 @@
 "use client";
-import { CourseItem } from "@/app/courses/[courseName]/page";
 import { useEffect, useState, FC } from "react";
+import { CourseItem } from "./CourseDetailsLayout";
 
 interface ProgressProps {
   courseName: string;
