@@ -1,8 +1,12 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { fundamentalebi, sashualoDonisHtmlCss, rtuliHtmlCss } from './courseDetailsData';
-import Progress from '@/components/CourseDetailsPage/Progress';
-import CourseCard from '@/components/CourseDetailsPage/CourseCard';
+"use client";
+import { useEffect, useState } from "react";
+import {
+  fundamentalebi,
+  sashualoDonisHtmlCss,
+  rtuliHtmlCss,
+} from "./courseDetailsData";
+import Progress from "@/components/CourseDetailsPage/Progress";
+import CourseCard from "@/components/CourseDetailsPage/CourseCard";
 
 interface ContentItem {
   id?: string;
@@ -23,29 +27,27 @@ const CourseDetailsPage = ({ params }: any) => {
   const [progress, setProgress] = useState<number>(0);
 
   const courseData: CourseItem[] =
-    courseName === 'fundamentalebi'
+    courseName === "fundamentalebi"
       ? fundamentalebi
-      : courseName === 'sashualoDonisHtmlCss'
+      : courseName === "sashualoDonisHtmlCss"
       ? sashualoDonisHtmlCss
-      : courseName === 'rtuliHtmlCss'
+      : courseName === "rtuliHtmlCss"
       ? rtuliHtmlCss
       : [];
-  
+
   const courseNameGeo: string =
-    courseName === 'fundamentalebi'
-      ? 'საფუძველები'
-      : courseName === 'sashualoDonisHtmlCss'
-      ? 'საშუალო დონის HTML და CSS კურსი'
-      : courseName === 'rtuliHtmlCss'
-      ? 'რთული HTML & CSS'
-      : '';
+    courseName === "fundamentalebi"
+      ? "საფუძველები"
+      : courseName === "sashualoDonisHtmlCss"
+      ? "საშუალო დონის HTML და CSS კურსი"
+      : courseName === "rtuliHtmlCss"
+      ? "რთული HTML & CSS"
+      : "";
 
   useEffect(() => {
-    document.title = `${courseNameGeo} | XAZY`;
-  }, [courseNameGeo]);
-
-  useEffect(() => {
-    const savedCompletedLessons = localStorage.getItem(`${courseName}-completed`);
+    const savedCompletedLessons = localStorage.getItem(
+      `${courseName}-completed`
+    );
     if (savedCompletedLessons) {
       setCompletedLessons(JSON.parse(savedCompletedLessons));
     }
@@ -62,26 +64,31 @@ const CourseDetailsPage = ({ params }: any) => {
   }, [completedLessons, courseData]);
 
   const handleLessonClick = (lessonLink: string) => {
-    const lastSlashIndex = lessonLink.lastIndexOf('/');
+    const lastSlashIndex = lessonLink.lastIndexOf("/");
     const extractedLink = lessonLink.substring(lastSlashIndex + 1);
     let updatedCompletedLessons: string[];
     if (!completedLessons.includes(extractedLink)) {
       updatedCompletedLessons = [...completedLessons, extractedLink];
     } else {
-      updatedCompletedLessons = completedLessons.filter((link) => link !== extractedLink);
+      updatedCompletedLessons = completedLessons.filter(
+        (link) => link !== extractedLink
+      );
     }
     setCompletedLessons(updatedCompletedLessons);
-    localStorage.setItem(`${courseName}-completed`, JSON.stringify(updatedCompletedLessons));
+    localStorage.setItem(
+      `${courseName}-completed`,
+      JSON.stringify(updatedCompletedLessons)
+    );
   };
 
   const getLastPartOfLink = (link: string) => {
-    const parts = link.split('/');
+    const parts = link.split("/");
     return parts[parts.length - 1];
   };
 
   return (
     <>
-      <div className='course-details-layout'>
+      <div className="course-details-layout">
         <Progress courseNameGeo={courseNameGeo} progress={progress} />
         {courseData.map((item, index) => (
           <CourseCard
