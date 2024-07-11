@@ -1,13 +1,45 @@
-import { FC } from "react";
+"use client";
+import { CourseItem } from "@/app/courses/[courseName]/page";
+import { useEffect, useState, FC } from "react";
 
 interface ProgressProps {
+  courseName: string;
   courseNameGeo: string;
-  progress: number;
+  courseData: CourseItem[];
+  completedLessons: string[];
+  setCompletedLessons: (lessons: string[]) => void;
 }
 
-const Progress: FC<ProgressProps> = ({ courseNameGeo, progress }) => {
+const Progress: FC<ProgressProps> = ({
+  courseName,
+  courseNameGeo,
+  courseData,
+  completedLessons,
+  setCompletedLessons,
+}) => {
+  const [progress, setProgress] = useState<number>(0);
+
+  useEffect(() => {
+    const savedCompletedLessons = localStorage.getItem(
+      `${courseName}-completed`
+    );
+    if (savedCompletedLessons) {
+      setCompletedLessons(JSON.parse(savedCompletedLessons));
+    }
+  }, [courseName, setCompletedLessons]);
+
+  useEffect(() => {
+    let totalLessons = 0;
+    courseData.forEach((item) => {
+      totalLessons += item.content.length;
+    });
+    const completedCount = completedLessons.length;
+    const completionPercentage = (completedCount / totalLessons) * 100;
+    setProgress(completionPercentage);
+  }, [completedLessons, courseData]);
+
   return (
-    <div className='course-details-progress'>
+    <div className="course-details-progress">
       <h1>{courseNameGeo}</h1>
       <div>
         <p>თქვენი პროგრესი: {Math.round(progress)}%</p>
@@ -20,7 +52,7 @@ const Progress: FC<ProgressProps> = ({ courseNameGeo, progress }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Progress
+export default Progress;

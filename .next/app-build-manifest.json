@@ -25,6 +25,12 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/courses/page.js"
+    ],
+    "/courses/[courseName]/[chapter]/[lesson]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/courses/[courseName]/[chapter]/[lesson]/page.css",
+      "static/chunks/app/courses/[courseName]/[chapter]/[lesson]/page.js"
     ]
   }
 }

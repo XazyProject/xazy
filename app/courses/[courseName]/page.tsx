@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   fundamentalebi,
   sashualoDonisHtmlCss,
@@ -15,7 +15,7 @@ interface ContentItem {
   project?: boolean;
 }
 
-interface CourseItem {
+export interface CourseItem {
   id?: string;
   title: string;
   content: ContentItem[];
@@ -23,8 +23,6 @@ interface CourseItem {
 
 const CourseDetailsPage = ({ params }: any) => {
   const { courseName } = params;
-  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
-  const [progress, setProgress] = useState<number>(0);
 
   const courseData: CourseItem[] =
     courseName === "fundamentalebi"
@@ -44,24 +42,7 @@ const CourseDetailsPage = ({ params }: any) => {
       ? "რთული HTML & CSS"
       : "";
 
-  useEffect(() => {
-    const savedCompletedLessons = localStorage.getItem(
-      `${courseName}-completed`
-    );
-    if (savedCompletedLessons) {
-      setCompletedLessons(JSON.parse(savedCompletedLessons));
-    }
-  }, [courseName]);
-
-  useEffect(() => {
-    let totalLessons = 0;
-    courseData.forEach((item) => {
-      totalLessons += item.content.length;
-    });
-    const completedCount = completedLessons.length;
-    const completionPercentage = (completedCount / totalLessons) * 100;
-    setProgress(completionPercentage);
-  }, [completedLessons, courseData]);
+  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
 
   const handleLessonClick = (lessonLink: string) => {
     const lastSlashIndex = lessonLink.lastIndexOf("/");
@@ -89,7 +70,13 @@ const CourseDetailsPage = ({ params }: any) => {
   return (
     <>
       <div className="course-details-layout">
-        <Progress courseNameGeo={courseNameGeo} progress={progress} />
+        <Progress
+          courseName={courseName}
+          courseNameGeo={courseNameGeo}
+          courseData={courseData}
+          completedLessons={completedLessons}
+          setCompletedLessons={setCompletedLessons}
+        />
         {courseData.map((item, index) => (
           <CourseCard
             key={`course-details-card-${index}`}
